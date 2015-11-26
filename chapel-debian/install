@@ -1,0 +1,12 @@
+bin             /usr/lib/chapel/
+runtime         /usr/lib/chapel/
+modules         /usr/lib/chapel/
+third-party     /usr/lib/chapel/
+lib             /usr/lib/chapel/
+util/setchplenv.bash    /usr/lib/chapel/util
+util/setchplenv.sh      /usr/lib/chapel/util
+util/setchplenv.csh     /usr/lib/chapel/util
+util/setchplenv.fish    /usr/lib/chapel/util
+util/config             /usr/lib/chapel/util
+util/printchplenv       /usr/lib/chapel/util
+util/chplenv            /usr/lib/chapel/util

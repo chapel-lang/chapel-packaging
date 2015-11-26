@@ -1,0 +1,8 @@
+chapel
+chapel-source
+
+build-area
+*.tar.gz
+*.deb
+*.dsc
+*.changes

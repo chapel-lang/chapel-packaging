@@ -1,0 +1,13 @@
+Source: chapel
+Section: devel
+Priority: optional
+Maintainer: Ben Albrecht <balbrecht@cray.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: http://chapel.cray.com/
+
+Package: chapel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The programming language from the future!
+ Looooong description
