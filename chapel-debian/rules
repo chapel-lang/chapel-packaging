@@ -3,9 +3,10 @@
 
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
+export CHPL_LIB_GMP=system
 
 %:
-	dh $@ 
+	dh $@ --with python2
 
 override_dh_auto_test:
 

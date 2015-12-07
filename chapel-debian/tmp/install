@@ -1,0 +1,26 @@
+LICENSE                 /usr/lib/chapel/
+LICENSE.chapel          /usr/lib/chapel/
+tools/                  /usr/lib/chapel/
+STATUS                  /usr/lib/chapel/
+README.files            /usr/lib/chapel/
+doc/                    /usr/lib/chapel/
+etc/                    /usr/lib/chapel/
+examples/               /usr/lib/chapel/
+GOALS                   /usr/lib/chapel/
+PERFORMANCE             /usr/lib/chapel/
+compiler/               /usr/lib/chapel/
+
+
+third-party/chpl-venv/      /usr/lib/chapel/third-party/
+third-party/dlmalloc/       /usr/lib/chapel/third-party/
+third-party/fltk/           /usr/lib/chapel/third-party/
+third-party/gasnet/         /usr/lib/chapel/third-party/
+third-party/hwloc/          /usr/lib/chapel/third-party/
+third-party/llvm/           /usr/lib/chapel/third-party/
+third-party/Makefile        /usr/lib/chapel/third-party/
+third-party/massivethreads/ /usr/lib/chapel/third-party/
+third-party/qthread/        /usr/lib/chapel/third-party/
+third-party/re2/            /usr/lib/chapel/third-party/
+third-party/README          /usr/lib/chapel/third-party/
+third-party/tcmalloc/       /usr/lib/chapel/third-party/
+third-party/utf8-decoder/   /usr/lib/chapel/third-party/

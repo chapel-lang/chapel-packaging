@@ -1,12 +1,12 @@
-bin             /usr/lib/chapel/
-runtime         /usr/lib/chapel/
-modules         /usr/lib/chapel/
-third-party     /usr/lib/chapel/
-lib             /usr/lib/chapel/
-util/setchplenv.bash    /usr/lib/chapel/util
-util/setchplenv.sh      /usr/lib/chapel/util
-util/setchplenv.csh     /usr/lib/chapel/util
-util/setchplenv.fish    /usr/lib/chapel/util
-util/config             /usr/lib/chapel/util
-util/printchplenv       /usr/lib/chapel/util
-util/chplenv            /usr/lib/chapel/util
+bin/                    /usr/lib/chapel/
+ACKNOWLEDGEMENTS        /usr/lib/chapel/
+CHANGES                 /usr/lib/chapel/
+CONTRIBUTORS            /usr/lib/chapel/
+make/                   /usr/lib/chapel/
+modules/                /usr/lib/chapel/
+README.rst              /usr/lib/chapel/
+runtime/                /usr/lib/chapel/
+
+util/README             /usr/lib/chapel/util/
+util/printchplenv       /usr/lib/chapel/util/
+util/chplenv/*.py       /usr/lib/chapel/util/chplenv/

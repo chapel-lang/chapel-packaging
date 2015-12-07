@@ -43,4 +43,4 @@ rm -rf build-area
 ( cd ${PKG} && bzr builddeb -- -us -uc )
 
 ### Information about package ###
-lesspipe ${DEB}
+#lesspipe ${DEB}

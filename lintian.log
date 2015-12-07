@@ -1,0 +1,5 @@
+    E: chapel: description-starts-with-package-name
+    W: chapel: manpage-has-errors-from-man usr/share/man/man1/chpl.1.gz 1: warning: macro `"' not defined
+W: chapel: executable-not-elf-or-script usr/lib/chapel/runtime/include/chpl_rt_utils_static.h
+W: chapel: executable-not-elf-or-script usr/lib/chapel/runtime/include/cygwin/chplfp.h
+W: chapel: executable-not-elf-or-script usr/lib/chapel/util/chplenv/utils.py

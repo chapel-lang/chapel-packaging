@@ -17,9 +17,9 @@ which ${BINARY}
 
 ${BINARY} --help
 
-ls -R /usr/lib/${PKG}
+ls -R /usr/lib/${BINARY}
 
-ls -R /usr/bin/${PKG}
+ls -R /usr/bin/${BINARY}
 
 # testing..
 echo "Uninstall ${PKG}? (ctrl-c to cancel)"
