@@ -13,8 +13,9 @@ also read this and set them beforehand:
 * Set `$CHPL_RELEASE` variable to the path of a Chapel tarball/release dir
     * If you want to build a release from master, call `$CHPL_HOME/util/buildRelease/genRelease`
 
-* TODO: Packages to preinstall
-* TODO: Account setup for deployment 
+* Packages to install prior to package building: `sudo apt-get install packaging-dev`
+* See [Ubuntu Packaging Guide](http://packaging.ubuntu.com/html/getting-set-up.html) 
+  for setting up LaunchPad and Bazaar, if you plan to push the built package upstream
 
 ## Scripts
 
