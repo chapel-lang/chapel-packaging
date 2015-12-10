@@ -9,11 +9,12 @@ also read this and set them beforehand:
 
 * Ideally for testing, you'll want to be running a VM with the OS and
     particular release you are building a package for.
-* PATH=chapel-packaging/util:$PATH or source chapel-packaging/util/source-me.sh
-* Set `$CHPL_RELEASE` variable to the path of a Chapel tarball/release dir
-    * If you want to build a release from master, call `$CHPL_HOME/util/buildRelease/genRelease`
-
-* Packages to install prior to package building: `sudo apt-get install packaging-dev`
+* Set `$CHPL_RELEASE` variable to the path of a Chapel source dir.
+  For example,  
+  `tar -xzf chapel-1.13.0.tar.gz ; export CHPL_RELEASE=$PWD/chapel-1.13.0`
+* Dependencies to install prior to package building:
+  `sudo apt-get install build-essential python-setup packaging-dev libgmp-dev`
+* Check `bzr whoami` : if empty, set it: `bzr whoami "Chapel Man <you@your.org>"`
 * See [Ubuntu Packaging Guide](http://packaging.ubuntu.com/html/getting-set-up.html) 
   for setting up LaunchPad and Bazaar, if you plan to push the built package upstream
 
@@ -27,7 +28,7 @@ Usage:
     # or
     export UBUNTU_RELEASE=<release>
     ./<script>
-
+For example, use `UBUNTU_RELEASE=trusty` for Ubuntu 14.04
 
 ### build.sh
 
