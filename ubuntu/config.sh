@@ -1,33 +1,36 @@
 configParse() {
-# Argument parsing
+    # Argument parsing
 
-case $1 in
+    case $1 in
     "-h")
         configHelp
         exit 0
-    ;;
+        ;;
     "--help")
         configHelp
         exit 0
-    ;;
+        ;;
+    "")
+        ;;
     *)
-        # Check that directory exists
-        if [ -d $1 ]; then
-            echo "Setting UBUNTU_RELEASE to $1"
-            UBUNTU_RELEASE=$1
-        else
-            echo "Error: $1 Does not exist"
-            exit 1
-        fi
-esac
+        UBUNTU_RELEASE=$1
+        ;;
+    esac
 
-# Post-parse check
-if [ -z ${UBUNTU_RELEASE} ]; then
-    echo "Error: \$UBUNTU_RELEASE is not set"
-    configHelp
-    exit 1
-fi
+    # Post-parse check
+    if [ -z "${UBUNTU_RELEASE}" ]; then
+        echo "Error: \$UBUNTU_RELEASE is not set"
+        configHelp
+        exit 1
+    fi
 
+    # Check that directory exists
+    if [ -d "${UBUNTU_RELEASE}" ]; then
+        echo "\$UBUNTU_RELEASE" is "${UBUNTU_RELEASE}"
+    else
+        echo "Error: \$UBUNTU_RELEASE=${UBUNTU_RELEASE} Does not exist"
+        exit 1
+    fi
 }
 
 

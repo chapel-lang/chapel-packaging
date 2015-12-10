@@ -27,12 +27,12 @@ which ${BINARY}
 
 ${BINARY} --help
 
-ls -R /usr/lib/${BINARY}
+ls -R /usr/lib/${PKG}
 
-ls -R /usr/bin/${BINARY}
+ls -l /usr/bin/${BINARY}
 
 # TODO - more testing?
-
+echo "Test successful."
 
 # Uninstall package (optionally)
 echo "Uninstall ${PKG}? (ctrl-c to cancel)"
