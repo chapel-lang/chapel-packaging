@@ -1,8 +1,9 @@
 chapel
-chapel-source
+chapel-*
 
 build-area
 *.tar.gz
 *.deb
 *.dsc
 *.changes
+*.xz
