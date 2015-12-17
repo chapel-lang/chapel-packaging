@@ -114,4 +114,5 @@ configClean() {
     rm -f ${DEB_TAR}
     rm -f ${DSC}
     rm -rf build-area
+    rm -f *lint.log
 }

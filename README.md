@@ -7,12 +7,13 @@ Chapel builds packages for, containing the package build files and scripts to
 build, test, and deploy a Chapel package. These are primarily meant for
 internal use.
 
-The `dropoff/` directory contains packages built by these scripts in their
-current development form for users to have access before the 1.13 release.
-
 See the READMEs within a given OS directory for more information on building
 the package. The usage for these scripts should generally be the same across
 each OS.
+
+The `dropoff/` directory temporarily contains packages built by these scripts
+in their current development form for users to have access before the 1.13
+release.
 
 ## Packages
 

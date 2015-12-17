@@ -1,10 +1,10 @@
 chapel
 chapel-*
 
+*/*/*.deb
+*/*/*.dsc
 build-area
 *.tar.gz
-*.deb
-*.dsc
 *.changes
 *.xz
 *lint.log
