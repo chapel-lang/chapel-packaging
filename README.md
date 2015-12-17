@@ -20,8 +20,8 @@ release.
 The following distributions are currently works in progress, and are planned
 for deployment around the Chapel 1.13.0 release.
 
-* debian (APT / deb)
-    * ubuntu (APT / deb)
+* debian (deb)
+    * ubuntu (deb)
 
 The following distributions are planned for packaging in the future
 (including downstream distributions over time):
