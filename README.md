@@ -1,32 +1,34 @@
-# Packaging for Chapel
+# Chapel Packaging
 
-This is the (soon-to-be) official packaging repository for Chapel.
+This is the official packaging repository for Chapel.
 
 There a top-level directory for each OS (linux distributions, in our case) that
-Chapel builds packages for. There is a separate set of scripts for building,
-testing, and deploying the package for each OS because each OS handles
-packaging differently.
+Chapel builds packages for, containing the package build files and scripts to
+build, test, and deploy a Chapel package. These are primarily meant for
+internal use.
 
-See the README.md in a given OS for a brief description of what the scripts
-are doing, and how to use them to build, test, and release the Chapel package.
+The `dropoff/` directory contains packages built by these scripts in their
+current development form for users to have access before the 1.13 release.
 
-The usage for these scripts should generally be the same across each OS.
+See the READMEs within a given OS directory for more information on building
+the package. The usage for these scripts should generally be the same across
+each OS.
 
+## Packages
 
-The following distributions are currently works in progress:
+The following distributions are currently works in progress, and are planned
+for deployment around the Chapel 1.13.0 release.
 
-* ubuntu (APT / deb)
 * debian (APT / deb)
+    * ubuntu (APT / deb)
 
+The following distributions are planned for packaging in the future
+(including downstream distributions over time):
 
-The following distributions are planned for packaging in the near future:
-
-* OpenSUSE      (YaST / RPM)
-* Linux Mint    (APT / deb)
-* SUSE          (YaST / RPM)
-* Fedora        (yum / RPM)
-* Arch          (pacman / PKGBUILD)
-* CentOS        (yum / RPM)
-* Gentoo        (portage / ebuild)
-
-
+* SUSE (RPM)
+    * OpenSUSE
+* Fedora (RPM)
+    * RHEL
+        * CentOS
+* Arch (PKGBUILD)
+* Gentoo (ebuild)

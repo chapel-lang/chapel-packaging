@@ -25,11 +25,11 @@ Usage:
     # or
     export UBUNTU_RELEASE=<release>
     ./<script>
-For example, use `UBUNTU_RELEASE=trusty` for Ubuntu 14.04
+For example, use `UBUNTU_RELEASE=jessie` for Ubuntu 14.04
 
 ### build.sh
 
-Builds a .deb and .dpkg for the provided Ubuntu release (e.g. trusty) from the
+Builds a .deb and .dpkg for the provided Ubuntu release (e.g. jessie) from the
 unpacked release tarball of Chapel
 
 ### test.sh

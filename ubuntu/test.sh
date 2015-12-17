@@ -31,7 +31,7 @@ ls -R /usr/lib/${PKG}
 
 ls -l /usr/bin/${BINARY}
 
-# TODO - more testing?
+# TODO - more testing: Compile Chapel code, pbuilder
 echo "Test successful."
 
 # Uninstall package (optionally)

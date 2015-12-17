@@ -63,10 +63,6 @@ configSetup() {
         exit 1
     fi
 
-    # User specific (for deployment)
-    LPUSERNAME=balbrecht
-    # PPA=TODO
-
     # Package specific
     PKG=chapel
     BINARY=chpl

@@ -7,3 +7,4 @@ build-area
 *.dsc
 *.changes
 *.xz
+*lint.log
