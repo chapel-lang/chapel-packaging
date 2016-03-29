@@ -6,9 +6,6 @@ source config.sh
 
 ### Preliminary setup ###
 
-# Argument parsing
-configParse "$@"
-
 # Setup variables
 configSetup
 

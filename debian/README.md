@@ -10,10 +10,10 @@ also read this and set them beforehand:
 * Ideally for testing, you'll want to be running a VM with the OS and
     particular release you are building a package for.
 * Set `$CHPL_RELEASE` variable to the path of a Chapel source dir.
-  For example,  
+  For example,
   `tar -xzf chapel-1.13.0.tar.gz ; export CHPL_RELEASE=$PWD/chapel-1.13.0`
 * Dependencies to install prior to package building:
-  `sudo apt-get install build-essential python-setup packaging-dev libgmp-dev`
+  `sudo apt-get install build-essential python-setuptools packaging-dev libgmp-dev`
 
 ## Scripts
 
@@ -23,9 +23,9 @@ Usage:
 
     ./<script> <release>
     # or
-    export UBUNTU_RELEASE=<release>
+    export DEBIAN_RELEASE=<release>
     ./<script>
-For example, use `UBUNTU_RELEASE=jessie` for Ubuntu 14.04
+For example, use `DEBIAN_RELEASE=jessie` for Debian 8
 
 ### build.sh
 
