@@ -1,12 +1,12 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-# Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 export CHPL_LIB_GMP=system
+export DEB_BUILD_OPTIONS="parallel=4"
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2 --parallel 
 
 override_dh_auto_test:
 
@@ -14,5 +14,3 @@ override_dh_auto_test:
 override_dh_auto_clean:
 	dh_auto_clean -- clobber
 
-override_dh_auto_build:
-	dh_auto_build --parallel

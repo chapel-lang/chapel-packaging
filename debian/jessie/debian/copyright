@@ -1,11 +1,12 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Files-Excluded: doc third-party/fltk third-party/gasnet third-party/gmp third-party/libhdfs3 third-party/massivethreads third-party/hwloc/hwloc-src/doc highlight tools third-party/chpl-venv/chpldoc-sphinx-project/.gitignore examples/benchmarks/isx/.gitignore third-party/hwloc/hwloc-src/contrib/windows/hwloc.sln third-party/re2/re2/doc
 Upstream-Name: Chapel
 Upstream-Contact: Ben Albrecht <balbrecht@cray.com>
 Source: https://github.com/chapel-lang/chapel
 
-Files: *
-Copyright: 2004-2015 Ben Albrecht <balbrecht@cray.com>
-License: Apache 2.0
+Files: compiler runtime modules make man examples
+Copyright: 2004-2016 Ben Albrecht <balbrecht@cray.com>
+License: Apache
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
@@ -22,4 +23,42 @@ License: Apache 2.0
  be found in "/usr/share/common-licenses/Apache-2.0"
 
 
-License: Apache 2.0
+Files: third-party/hwloc third-party/qthread third-party/re2 third-party/utf8-decoder
+Copyright: 2004-2016 Ben Albrecht <balbrecht@cray.com>
+License: BSD
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+     http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the complete text of the Apache License 2.0 can
+ be found in "/usr/share/common-licenses/Apache-2.0"
+
+Files: third-party/jemalloc
+Copyright: 2002-2015 Jason Evans <jasone@canonware.com>.
+License: bsd-derived
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ 1. Redistributions of source code must retain the above copyright notice(s),
+    this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright notice(s),
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER(S) ``AS IS'' AND ANY EXPRESS
+ OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+ EVENT SHALL THE COPYRIGHT HOLDER(S) BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
