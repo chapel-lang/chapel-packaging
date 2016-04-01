@@ -1,3 +1,5 @@
+CHPL_RELEASE_URL_DEFAULT=http://web/~balbrecht/release/chapel-1.13.0.tar.gz
+
 configHelp() {
     # Print help
     echo;
@@ -13,26 +15,30 @@ configHelp() {
 configSetup() {
     # Setup all the common variables and confirm inputs are defined
 
+    echo ""
+
     # This variable is always read as an environment variable
-    if [ -z ${CHPL_RELEASE} ]; then
-        echo "\$CHPL_RELEASE is not defined"
-        echo "Define via command line argument or environment variable"
-        exit 1
+    if [ -z ${CHPL_RELEASE_URL} ]; then
+        echo "\$CHPL_RELEASE_URL undefined; Setting \$CHPL_RELEASE_URL to:"
+        CHPL_RELEASE_URL=${CHPL_RELEASE_URL_DEFAULT}
+        echo "${CHPL_RELEASE_URL}"
+        echo ""
+        export CHPL_RELEASE_URL
     fi
 
     # This variable can be read as env var or passed as argument
     if [ -z ${DEBIAN_RELEASE} ]; then
-        echo "\$DEBIAN_RELEASE is not defined as an environment variable"
-        DEBIAN_RELEASE=`lsb_release -a | grep Codename | awk '{print $2}'`
-        echo "Defining \$DEBIAN_RELEASE as:"
+        echo "\$DEBIAN_RELEASE undefined; Setting \$DEBIAN_RELEASE to:"
+        DEBIAN_RELEASE=`lsb_release -a 2> /dev/null | grep Codename | awk '{print $2}'`
         echo "${DEBIAN_RELEASE}"
+        echo ""
         export DEBIAN_RELEASE
     fi
 
     # Package specific
     PKG=chapel
     BINARY=chpl
-    VERSION=1.13.0
+    VERSION=1.13
 
     # Machine specific (generated dynamically)
     DEBIAN=1
@@ -42,9 +48,8 @@ configSetup() {
     ORIG_TARBALL=${PKG}_${VERSION}.orig.tar.gz
 
     # Directories
-    SRC=${CHPL_RELEASE}
-    SRC_BASENAME=$(basename ${CHPL_RELEASE})
-    SRC_DIRNAME=$(dirname ${CHPL_RELEASE})
+    SRC_TAR=$(basename ${CHPL_RELEASE_URL})
+    SRC=$(basename ${CHPL_RELEASE_URL} | cut -f 1,2,3 -d '.')
     DEB_SRC=debian
 
     # Package Files
@@ -52,7 +57,8 @@ configSetup() {
 
     CHANGES=${BASENAME}_${ARCH}.changes
     DEB=${BASENAME}_${ARCH}.deb
-    DEB_TAR=${BASENAME}.debian.tar.gz
+    DEB_TAR_GZ=${BASENAME}.debian.tar.gz
+    DEB_TAR_XZ=${BASENAME}.debian.tar.xz
     DSC=${BASENAME}.dsc
 }
 
@@ -61,8 +67,7 @@ configClean() {
 
     # Create gzipped tarball from source
     safeClean ${TARBALL}
-
-    # Generate template via bzr
+    safeClean ${PKG}
     safeClean ${ORIG_TARBALL}
     safeClean ${PKG}
 
@@ -72,7 +77,8 @@ configClean() {
     # Clean package files
     safeClean ${CHANGES}
     safeClean ${DEB}
-    safeClean ${DEB_TAR}
+    safeClean ${DEB_TAR_GZ}
+    safeClean ${DEB_TAR_XZ}
     safeClean ${DSC}
     safeClean build-area
 }
