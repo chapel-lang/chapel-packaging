@@ -1,10 +1,10 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Files-Excluded: doc third-party/fltk third-party/gasnet third-party/gmp third-party/libhdfs3 third-party/massivethreads third-party/hwloc/hwloc-src/doc highlight tools third-party/chpl-venv/chpldoc-sphinx-project/.gitignore examples/benchmarks/isx/.gitignore third-party/hwloc/hwloc-src/contrib/windows/hwloc.sln third-party/re2/re2/doc
+Files-Excluded: doc third-party/fltk third-party/gasnet third-party/gmp third-party/libhdfs3 third-party/massivethreads highlight tools third-party/chpl-venv/chpldoc-sphinx-project/.gitignore examples/benchmarks/isx/.gitignore third-party/hwloc/hwloc-src/contrib/windows/hwloc.sln third-party/re2/re2/doc third-party/hwloc/hwloc-src/doc/doxygen-doc/html third-party/hwloc/hwloc-src/doc/images /third-party/re2/re2/re2/testing
 Upstream-Name: Chapel
 Upstream-Contact: Ben Albrecht <balbrecht@cray.com>
 Source: https://github.com/chapel-lang/chapel
 
-Files: compiler runtime modules make man examples
+Files: compiler runtime modules make man examples *.md *.rst
 Copyright: 2004-2016 Ben Albrecht <balbrecht@cray.com>
 License: Apache
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -51,7 +51,7 @@ License: bsd-derived
  2. Redistributions in binary form must reproduce the above copyright notice(s),
     this list of conditions and the following disclaimer in the documentation
     and/or other materials provided with the distribution.
- 
+ .
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER(S) ``AS IS'' AND ANY EXPRESS
  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO

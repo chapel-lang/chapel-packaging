@@ -2,7 +2,7 @@ Source: chapel
 Section: devel
 Priority: optional
 Maintainer: Ben Albrecht <balbrecht@cray.com>
-Build-Depends: debhelper (>= 9), ${python:Depends}
+Build-Depends: debhelper (>= 9), python2.7
 Standards-Version: 3.9.6
 Homepage: http://chapel.cray.com/
 
