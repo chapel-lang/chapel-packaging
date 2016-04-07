@@ -1,0 +1,39 @@
+Remove references from Makefile.base to third-party
+Index: chapel/make/Makefile.base
+===================================================================
+--- chapel.orig/make/Makefile.base
++++ chapel/make/Makefile.base
+@@ -143,16 +143,16 @@ CHPL_MAKE_BASE_LFLAGS =
+ #
+ THIRD_PARTY_DIR = $(CHPL_MAKE_HOME)/third-party
+ 
+-include $(THIRD_PARTY_DIR)/gasnet/Makefile.include
+-include $(THIRD_PARTY_DIR)/massivethreads/Makefile.include
++#include $(THIRD_PARTY_DIR)/gasnet/Makefile.include
++#include $(THIRD_PARTY_DIR)/massivethreads/Makefile.include
+ include $(THIRD_PARTY_DIR)/qthread/Makefile.include
+ include $(THIRD_PARTY_DIR)/jemalloc/Makefile.include
+-include $(THIRD_PARTY_DIR)/gmp/Makefile.include
++#include $(THIRD_PARTY_DIR)/gmp/Makefile.include
+ include $(THIRD_PARTY_DIR)/hwloc/Makefile.include
+ include $(THIRD_PARTY_DIR)/re2/Makefile.include
+-include $(THIRD_PARTY_DIR)/llvm/Makefile.include-$(CHPL_MAKE_LLVM)
++#include $(THIRD_PARTY_DIR)/llvm/Makefile.include-$(CHPL_MAKE_LLVM)
+ include $(THIRD_PARTY_DIR)/chpl-venv/Makefile.include
+-include $(THIRD_PARTY_DIR)/fltk/Makefile.include
++#include $(THIRD_PARTY_DIR)/fltk/Makefile.include
+ 
+ -include $(THIRD_PARTY_DIR)/Makefile.devel.include
+ 
+Index: chapel/Makefile
+===================================================================
+--- chapel.orig/Makefile
++++ chapel/Makefile
+@@ -165,7 +165,6 @@ clobber: FORCE
+ 	cd modules && $(MAKE) clobber
+ 	cd runtime && $(MAKE) clobber
+ 	cd third-party && $(MAKE) clobber
+-	cd tools/chplvis && $(MAKE) clobber
+ 	-@[ -d doc/sphinx ] && cd doc/sphinx && $(MAKE) clobber
+ 	rm -rf bin
+ 	rm -rf lib

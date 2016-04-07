@@ -3,6 +3,7 @@ chapel-*
 
 */*/*.deb
 */*/*.dsc
+*/*/*.mentors.upload
 build-area
 *.tar.gz
 *.changes

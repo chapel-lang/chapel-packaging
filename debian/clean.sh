@@ -4,10 +4,8 @@
 
 source config.sh
 
-configParse "$@"
-
 configSetup
 
-cd $UBUNTU_RELEASE
+cd ${DEBIAN_RELEASE}
 
 configClean
