@@ -1,4 +1,5 @@
-CHPL_RELEASE_URL_DEFAULT=http://web/~balbrecht/release/chapel-1.13.0.tar.gz
+# This URL does not exist until April 7, 2016:
+CHPL_RELEASE_URL_DEFAULT=https://github.com/chapel-lang/chapel/releases/download/1.13.0/chapel-1.13.0.tar.gz
 
 configHelp() {
     # Print help

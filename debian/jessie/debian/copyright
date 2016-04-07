@@ -4,7 +4,7 @@ Upstream-Name: Chapel
 Upstream-Contact: Ben Albrecht <balbrecht@cray.com>
 Source: https://github.com/chapel-lang/chapel
 
-Files: compiler runtime modules make man examples *.md *.rst
+Files: *.md *.rst compiler runtime modules make man examples
 Copyright: 2004-2016 Ben Albrecht <balbrecht@cray.com>
 License: Apache
  Licensed under the Apache License, Version 2.0 (the "License");
