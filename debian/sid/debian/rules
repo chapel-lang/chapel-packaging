@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export DH_VERBOSE=1
+export CHPL_LIB_GMP=system
+export DEB_BUILD_OPTIONS="parallel=4"
+
+%:
+	dh $@ --with python2 --parallel
+
+override_dh_auto_test:
+
+
+override_dh_auto_clean:
+	dh_auto_clean -- clobber
+

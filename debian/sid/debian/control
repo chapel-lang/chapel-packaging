@@ -1,0 +1,19 @@
+Source: chapel
+Section: devel
+Priority: optional
+Maintainer: Ben Albrecht <balbrecht@cray.com>
+Build-Depends: debhelper (>= 9), python2.7
+Standards-Version: 3.9.6
+Homepage: http://chapel.cray.com/
+
+Package: chapel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, libgmp-dev
+Description: Compiler for Chapel, a productive parallel programming language
+ Emerging programming language designed for productive parallel
+ computing at scale. Chapel's design and implementation have been undertaken
+ with portability in mind, permitting Chapel to run on multicore desktops and
+ laptops, commodity clusters, and the cloud, in addition to the high-end
+ supercomputers for which it was designed. Chapel's design and development are
+ being led by Cray Inc. in collaboration with academia, computing centers, and
+ industry.
