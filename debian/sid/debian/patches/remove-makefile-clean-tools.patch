@@ -1,6 +1,6 @@
 Removed tools clean from Makefile (since we remove tools)
---- a/chapel-1.13.1/Makefile
-+++ b/chapel-1.13.1/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -165,7 +165,6 @@
  	cd modules && $(MAKE) clobber
  	cd runtime && $(MAKE) clobber

@@ -5,12 +5,7 @@ make                    /usr/lib/chapel/
 man                     /usr/lib/chapel/
 modules                 /usr/lib/chapel/
 runtime                 /usr/lib/chapel/
-third-party/chpl-venv   /usr/lib/chapel/third-party/
-third-party/hwloc       /usr/lib/chapel/third-party/
-third-party/jemalloc    /usr/lib/chapel/third-party/
-third-party/qthread     /usr/lib/chapel/third-party/
-third-party/re2         /usr/lib/chapel/third-party/
-third-party/utf8-decoder /usr/lib/chapel/third-party/
+third-party             /usr/lib/chapel/
 util/printchplenv       /usr/lib/chapel/util/
 util/chplenv            /usr/lib/chapel/util/
 ACKNOWLEDGEMENTS.md     /usr/lib/chapel/
