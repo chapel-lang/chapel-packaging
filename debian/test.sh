@@ -13,12 +13,12 @@ cd ${DEBIAN_RELEASE}
 
 ### Package Quality ###
 echo "Generating lintian logs"
-lintian ${DEB} > deb-lint.log
-lintian ${DSC} > dsc-lint.log
+lintian ${DEB} > ../cache/deb-lint.log
+lintian ${DSC} > ../cache/dsc-lint.log
 
 # Information about package
 echo "Generating package information log"
-lesspipe ${DEB} > pkg-info.log
+lesspipe ${DEB} > ../cache/pkg-info.log
 
 set -x
 
