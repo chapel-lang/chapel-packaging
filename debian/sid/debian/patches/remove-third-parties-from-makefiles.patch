@@ -1,6 +1,6 @@
 Remove all third-parties from Makefiles, to prevent errors for minimal version.
---- a/chapel-1.13.1/make/Makefile.base
-+++ b/chapel-1.13.1/make/Makefile.base
+--- a/make/Makefile.base
++++ b/make/Makefile.base
 @@ -143,16 +143,7 @@
  #
  THIRD_PARTY_DIR = $(CHPL_MAKE_HOME)/third-party
@@ -18,8 +18,8 @@ Remove all third-parties from Makefiles, to prevent errors for minimal version.
  
  -include $(THIRD_PARTY_DIR)/Makefile.devel.include
  
---- a/chapel-1.13.1/third-party/Makefile
-+++ b/chapel-1.13.1/third-party/Makefile
+--- a/third-party/Makefile
++++ b/third-party/Makefile
 @@ -15,43 +15,16 @@
  
  default: all
