@@ -1,11 +1,11 @@
 bin                     /usr/lib/chapel/
-examples                /usr/lib/chapel/
 lib                     /usr/lib/chapel/
-make                    /usr/lib/chapel/
-man                     /usr/lib/chapel/
 modules                 /usr/lib/chapel/
 runtime                 /usr/lib/chapel/
 third-party             /usr/lib/chapel/
+make/Makefile.base      /usr/lib/chapel/make/
+make/platform           /usr/lib/chapel/make/
+make/tasks              /usr/lib/chapel/make/
 util/printchplenv       /usr/lib/chapel/util/
 util/chplenv            /usr/lib/chapel/util/
 ACKNOWLEDGEMENTS.md     /usr/lib/chapel/
