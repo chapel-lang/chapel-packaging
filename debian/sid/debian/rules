@@ -2,6 +2,7 @@
 # -*- makefile -*-
 
 export DH_VERBOSE=1
+export PYTHONDONTWRITEBYTECODE=1
 
 %:
 	dh $@ --with python2
