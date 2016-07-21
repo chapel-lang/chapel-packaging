@@ -1,0 +1,2 @@
+version=3
+https://github.com/chapel-lang/chapel/releases .*/chapel-(\d\S*)\.tar\.gz
