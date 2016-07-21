@@ -13,8 +13,10 @@ cd ${DEBIAN_RELEASE}
 
 ### Package Quality ###
 echo "Generating lintian logs"
-lintian ${DEB} > ../cache/deb-lint.log
-lintian ${DSC} > ../cache/dsc-lint.log
+LINTFLAGS="-I --show-overrides"
+lintian ${LINTFLAGS} ${DEB} > ../cache/deb-lint.log
+lintian ${LINTFLAGS} ${DSC} > ../cache/dsc-lint.log
+lintian ${LINTFLAGS} ${CHANGES} > ../cache/changes-lint.log
 
 # Information about package
 echo "Generating package information log"
@@ -27,11 +29,12 @@ sudo dpkg -i ${DEB}
 
 which ${BINARY}
 
-${BINARY} --help
+${BINARY} --version
 
-ls -R /usr/lib/${PKG}
+echo "Package contents:"
+ls -R /usr/lib/chapel > ../cache/pkg-contents.log
 
-ls -l /usr/bin/${BINARY}
+ls -l /usr/bin/${BINARY} >> ../cache/pkg-contents.log
 
 set +x
 

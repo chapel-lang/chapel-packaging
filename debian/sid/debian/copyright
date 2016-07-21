@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Files-Excluded: doc tools highlight third-party/fltk  third-party/gasnet  third-party/gmp  third-party/hwloc  third-party/jemalloc  third-party/libhdfs3  third-party/llvm  third-party/massivethreads  third-party/qthread  third-party/re2 third-party/chpl-venv/chpldoc-sphinx-project/.gitignore examples/benchmarks/isx/.gitignore util/chplenv/template
+Files-Excluded: doc tools highlight third-party/fltk  third-party/gasnet  third-party/gmp  third-party/hwloc  third-party/jemalloc  third-party/libhdfs3  third-party/llvm  third-party/massivethreads  third-party/qthread  third-party/re2 third-party/chpl-venv/chpldoc-sphinx-project/.gitignore examples/benchmarks/isx/.gitignore util/chplenv/template examples
 Upstream-Name: Chapel
 Upstream-Contact: Ben Albrecht <balbrecht@cray.com>
 Source: https://github.com/chapel-lang/chapel
@@ -24,7 +24,7 @@ License: Apache
  be found in "/usr/share/common-licenses/Apache-2.0"
 
 
-Files: third-party/utf8-decoder
+Files: third-party/utf8-decoder/*
 Copyright: 2008-2016 Bjoern Hoehrmann <bjoern@hoehrmann.de>
 License: custom-license
  Permission is hereby granted, free of charge, to any person obtaining

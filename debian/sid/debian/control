@@ -2,13 +2,13 @@ Source: chapel-minimal
 Section: devel
 Priority: optional
 Maintainer: Ben Albrecht <balbrecht@cray.com>
-Build-Depends: debhelper (>= 9), python
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9), python, dh-python
+Standards-Version: 3.9.8
 Homepage: http://chapel.cray.com/
 
 Package: chapel-minimal
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, python:any (<< 2.8), python:any (>= 2.7.5-5~), python:any (>= 2.7~)
 Description: Minimal compiler for the Chapel programming language
  Minimal compiler without third-party dependencies for Chapel, an emerging
  programming language designed for productive parallel computing at scale.
