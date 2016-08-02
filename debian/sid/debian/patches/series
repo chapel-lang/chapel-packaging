@@ -1,3 +1,2 @@
-remove-third-parties-from-makefiles.patch
+remove-3p.patch
 update-default-envs.patch
-remove-makefile-clean-tools.patch
