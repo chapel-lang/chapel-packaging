@@ -41,4 +41,9 @@ tar -zxf ${ORIG_TARBALL} -C ${PKG} --strip-components 1
 # Move debian directory with custom debian files into source
 cp -r ${DEB_SRC} ${PKG}/debian
 
-(cd ${PKG} && dpkg-buildpackage  -j4 -us -uc 2>&1 | tee ../../cache/build.log)
+if [ -z ${DRY+x} ]; then
+    (cd ${PKG} && dpkg-buildpackage  -j4 -us -uc 2>&1 | tee ../../cache/build.log)
+else
+    echo "\$DRY is set, not building with dpkg-buildpackage..."
+fi
+

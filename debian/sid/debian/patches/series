@@ -1,2 +1,3 @@
-remove-3p.patch
-update-default-envs.patch
+remove-third-parties.patch
+remove-clean-docs.patch
+chplconfig

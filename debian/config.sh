@@ -18,7 +18,7 @@ configSetup() {
     # Package specific
     PKG=chapel-minimal
     BINARY=chpl
-    VERSION=1.13.1
+    VERSION=1.14.0
 
     # This variable is always read as an environment variable
     if [ -z ${CHPL_RELEASE_URL} ]; then

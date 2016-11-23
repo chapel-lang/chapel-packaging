@@ -1,7 +1,37 @@
-Remove third parties
+Description: Remove third-party packages from repository
+ The minimal chapel package is not intended to include these packages.
+ .
+ This is a change to comply with Debian packaging standards, and is not
+ meant for upstream.
+Author: Ben Albrecht <balbrecht@cray.com>
+Forwarded: not-needed
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/Makefile
++++ b/Makefile
+@@ -123,11 +123,8 @@
+ 	fi
+ 
+ chplvis: compiler third-party-fltk FORCE
+-	cd tools/chplvis && $(MAKE)
+-	cd tools/chplvis && $(MAKE) install
+ 
+ third-party-fltk: FORCE
+-	cd third-party/fltk && $(MAKE)
+ 
+ clean: FORCE
+ 	cd compiler && $(MAKE) clean
+@@ -154,7 +151,6 @@
+ 	cd modules && $(MAKE) clobber
+ 	cd runtime && $(MAKE) clobber
+ 	cd third-party && $(MAKE) clobber
+-	cd tools/chplvis && $(MAKE) clobber
+ 	-@[ -d doc/sphinx ] && cd doc/sphinx && $(MAKE) clobber
+ 	rm -rf bin
+ 	rm -rf lib
 --- a/make/Makefile.base
 +++ b/make/Makefile.base
-@@ -143,16 +143,6 @@
+@@ -148,17 +148,6 @@
  #
  THIRD_PARTY_DIR = $(CHPL_MAKE_HOME)/third-party
  
@@ -13,19 +43,28 @@ Remove third parties
 -include $(THIRD_PARTY_DIR)/hwloc/Makefile.include
 -include $(THIRD_PARTY_DIR)/re2/Makefile.include
 -include $(THIRD_PARTY_DIR)/llvm/Makefile.include-$(CHPL_MAKE_LLVM)
--include $(THIRD_PARTY_DIR)/chpl-venv/Makefile.include
 -include $(THIRD_PARTY_DIR)/fltk/Makefile.include
- 
+-include $(THIRD_PARTY_DIR)/libunwind/Makefile.include
+-
  -include $(THIRD_PARTY_DIR)/Makefile.devel.include
  
+ #
 --- a/third-party/Makefile
 +++ b/third-party/Makefile
-@@ -15,58 +15,25 @@
+@@ -2,7 +2,6 @@
+ export CHPL_MAKE_HOME=$(shell pwd)/..
+ endif
+ include $(CHPL_MAKE_HOME)/make/Makefile.base
+-include $(THIRD_PARTY_DIR)/chpl-venv/Makefile.include
+ 
+ ifdef CHPL_DEVELOPER
+ DEBUG=1
+@@ -16,61 +15,25 @@
  
  default: all
  
--all: test-venv chpldoc-venv gasnet gmp hwloc jemalloc qthread llvm
-+all: 
+-all: test-venv chpldoc-venv gasnet gmp hwloc jemalloc libunwind qthread llvm
++all:
  
  clean: FORCE
 -	cd chpl-venv && $(MAKE) clean
@@ -33,6 +72,7 @@ Remove third parties
 -	cd gmp && $(MAKE) clean
 -	cd hwloc && $(MAKE) clean
 -	cd jemalloc && $(MAKE) clean
+-	cd libunwind && $(MAKE) clean
 -	cd llvm && $(MAKE) clean
 -	cd massivethreads && $(MAKE) clean
 -	cd qthread && $(MAKE) clean
@@ -45,6 +85,7 @@ Remove third parties
 -	cd gmp && $(MAKE) cleanall
 -	cd hwloc && $(MAKE) cleanall
 -	cd jemalloc && $(MAKE) cleanall
+-	cd libunwind && $(MAKE) cleanall
 -	cd llvm && $(MAKE) cleanall
 -	cd massivethreads && $(MAKE) cleanall
 -	cd qthread && $(MAKE) cleanall
@@ -57,6 +98,7 @@ Remove third parties
 -	cd gmp && $(MAKE) clobber
 -	cd hwloc && $(MAKE) clobber
 -	cd jemalloc && $(MAKE) clobber
+-	cd libunwind && $(MAKE) clobber
 -	cd llvm && $(MAKE) clobber
 -	cd massivethreads && $(MAKE) clobber
 -	cd qthread && $(MAKE) clobber
@@ -80,7 +122,7 @@ Remove third parties
  
  try-gmp: FORCE
  ifeq ($(wildcard $(GMP_BUILD_DIR)),)
-@@ -78,19 +45,15 @@
+@@ -82,23 +45,18 @@
  
  gmp: $(GMP_H_FILE)
  $(GMP_H_FILE):
@@ -93,6 +135,10 @@ Remove third parties
  jemalloc: $(JEMALLOC_INSTALL_DIR)
  $(JEMALLOC_INSTALL_DIR):
 -	cd jemalloc && $(MAKE)
+ 	
+ libunwind: $(LIBUNWIND_INSTALL_DIR)
+ $(LIBUNWIND_INSTALL_DIR):
+-	cd libunwind && $(MAKE)
  
  massivethreads: $(MASSIVETHREADS_INSTALL_DIR)
  $(MASSIVETHREADS_INSTALL_DIR):
@@ -100,12 +146,11 @@ Remove third parties
  
  ifeq ($(CHPL_MAKE_HWLOC), hwloc)
  qthread: $(HWLOC_INSTALL_DIR) $(QTHREAD_INSTALL_DIR)
-@@ -98,14 +61,12 @@
+@@ -106,14 +64,11 @@
  qthread: $(QTHREAD_INSTALL_DIR)
  endif
  $(QTHREAD_INSTALL_DIR):
 -	cd qthread && $(MAKE)
-+
  $(QTHREAD_ALIASES): qthread
  
  llvm: FORCE
@@ -116,7 +161,7 @@ Remove third parties
  
  try-re2: FORCE
  ifeq ($(wildcard $(RE2_BUILD_DIR)),)
-@@ -119,7 +80,6 @@
+@@ -127,7 +82,6 @@
  
  re2: $(RE2_H_FILE)
  $(RE2_H_FILE):
@@ -124,25 +169,3 @@ Remove third parties
  
  -include Makefile.devel
  
---- a/Makefile
-+++ b/Makefile
-@@ -134,11 +134,8 @@
- 	$(MAKE) module-docs-only
- 
- chplvis: compiler third-party-fltk FORCE
--	cd tools/chplvis && $(MAKE)
--	cd tools/chplvis && $(MAKE) install
- 
- third-party-fltk: FORCE
--	cd third-party/fltk && $(MAKE)
- 
- clean: FORCE
- 	cd compiler && $(MAKE) clean
-@@ -165,7 +162,6 @@
- 	cd modules && $(MAKE) clobber
- 	cd runtime && $(MAKE) clobber
- 	cd third-party && $(MAKE) clobber
--	cd tools/chplvis && $(MAKE) clobber
- 	-@[ -d doc/sphinx ] && cd doc/sphinx && $(MAKE) clobber
- 	rm -rf bin
- 	rm -rf lib

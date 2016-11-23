@@ -1,0 +1,33 @@
+Description: Remove docs cleanup in Makefile
+ The chapel-minimal package strips the docs directory away, making this target
+ unnecessary. Leaving this target in results in an ignored error.
+Author: Ben Albrecht <balbrecht@cray.com>
+Forwarded: not-needed
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/Makefile
++++ b/Makefile
+@@ -131,7 +131,6 @@
+ 	cd modules && $(MAKE) clean
+ 	cd runtime && $(MAKE) clean
+ 	cd third-party && $(MAKE) clean
+-	-@[ -d doc/sphinx ] && cd doc/sphinx && $(MAKE) clean
+ 	rm -f util/chplenv/*.pyc
+ 
+ cleanall: FORCE
+@@ -139,7 +138,6 @@
+ 	cd modules && $(MAKE) cleanall
+ 	cd runtime && $(MAKE) cleanall
+ 	cd third-party && $(MAKE) cleanall
+-	-@[ -d doc/sphinx ] && cd doc/sphinx && $(MAKE) cleanall
+ 	rm -f util/chplenv/*.pyc
+ 
+ cleandeps: FORCE
+@@ -151,7 +149,6 @@
+ 	cd modules && $(MAKE) clobber
+ 	cd runtime && $(MAKE) clobber
+ 	cd third-party && $(MAKE) clobber
+-	-@[ -d doc/sphinx ] && cd doc/sphinx && $(MAKE) clobber
+ 	rm -rf bin
+ 	rm -rf lib
+ 	rm -f util/chplenv/*.pyc

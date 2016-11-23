@@ -1,0 +1,14 @@
+Description: Add build configuration file to override defaults
+ This package requires overriding the default configurations. Chapel provides
+ a way to override these defaults through a 'chplconfig' file. This patch
+ adds the chplconfig file to the package root
+Author: Ben Albrecht <balbrecht@cray.com
+Forwarded: not-needed
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- /dev/null
++++ b/chplconfig
+@@ -0,0 +1,3 @@
++CHPL_MEM=cstdlib
++CHPL_TASKS=fifo
++CHPL_GMP=system

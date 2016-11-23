@@ -1,5 +1,5 @@
-chapel-minimal (1.13.1-1) unstable; urgency=low
+chapel-minimal (1.14.0-1) unstable; urgency=low
 
-  * Initial release (Closes: #831437 )
+  * Initial release (Closes: #831437)
 
- -- Ben Albrecht <balbrecht@cray.com>  Fri, 15 Jul 2016 23:35:55 +0000
+ -- Ben Albrecht <balbrecht@cray.com>  Tue, 18 Oct 2016 23:35:55 +0000
