@@ -2,11 +2,10 @@
 # -*- makefile -*-
 
 export DH_VERBOSE=1
-export PYTHONDONTWRITEBYTECODE=1
 export CHPL_HOME=../
 
 %:
-	dh $@ --with python2
+	dh $@
 
 override_dh_auto_test:
 
