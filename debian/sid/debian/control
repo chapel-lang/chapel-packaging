@@ -17,7 +17,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  python:any (<< 2.8), python:any (>= 2.7~),
- gcc-5,
+ gcc,
  dh-python
 X-Python-Version: >= 2.7
 Description: Minimal compiler for the Chapel programming language

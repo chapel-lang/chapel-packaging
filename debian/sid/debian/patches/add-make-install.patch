@@ -1,3 +1,8 @@
+Description: Add make install
+Author: Ben Albrecht <balbrecht@cray.com>
+Origin: backport, https://github.com/chapel-lang/chapel/pull/6036
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 diff --git a/Makefile b/Makefile
 index d2e3911796..ee528a30c2 100644
 --- a/Makefile
@@ -771,7 +776,6 @@ index 0000000000..ddd4dcc3ee
 +
 +# copy utf8-decoder header
 +myinstallfile third-party/utf8-decoder/utf8-decoder.h "$DEST_THIRD_PARTY"/utf8-decoder/
-+
 +# copy configured-chplconfig
 +if [ ! -z "$PREFIX" ]
 +then
@@ -779,6 +783,7 @@ index 0000000000..ddd4dcc3ee
 +else
 +  myinstallfileto  configured-chplconfig  "$DEST_CHPL_HOME/chplconfig"
 +fi
++ find "$DEST_CHPL_HOME" -name '*.pyc' -delete
 diff --git a/util/chplenv/chpl_home_utils.py b/util/chplenv/chpl_home_utils.py
 index 0dac1e5bfb..4b301b00cd 100644
 --- a/util/chplenv/chpl_home_utils.py
