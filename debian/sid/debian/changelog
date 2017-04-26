@@ -1,4 +1,4 @@
-chapel-minimal (1.14.0-1) unstable; urgency=low
+chapel-minimal (1.15.0-1) unstable; urgency=low
 
   * Initial release (Closes: #831437)
 

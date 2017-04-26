@@ -1,4 +1,3 @@
+add-make-install.patch
 acknowledge-cppflags.patch
-remove-third-parties.patch
-remove-clean-docs.patch
 chplconfig

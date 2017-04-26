@@ -15,3 +15,13 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  #
  # add gc-related stuff
+--- a/runtime/make/Makefile.runtime.include
++++ b/runtime/make/Makefile.runtime.include
+@@ -110,7 +110,7 @@
+ RUNTIME_DEFS += -fPIC
+ endif
+ 
+-RUNTIME_CFLAGS += $(RUNTIME_DEFS)
+-RUNTIME_CXXFLAGS += $(RUNTIME_DEFS) $(CXXFLAGS)
++RUNTIME_CFLAGS += $(RUNTIME_DEFS) $(CFLAGS)
++RUNTIME_CXXFLAGS += $(RUNTIME_DEFS) $(CPPFLAGS) $(CXXFLAGS)

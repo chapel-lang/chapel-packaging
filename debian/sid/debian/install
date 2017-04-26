@@ -13,9 +13,7 @@ CONTRIBUTORS.md         /usr/lib/chapel/
 COPYRIGHT               /usr/lib/chapel/
 GOALS.md                /usr/lib/chapel/
 PERFORMANCE.md          /usr/lib/chapel/
-QUICKSTART.rst          /usr/lib/chapel/
 README.rst              /usr/lib/chapel/
-STATUS                  /usr/lib/chapel/
 chplconfig              /usr/lib/chapel/
 util/chplenv/chpl_3p_gmp_configs.py             /usr/lib/chapel/util/chplenv/
 util/chplenv/chpl_3p_hwloc_configs.py           /usr/lib/chapel/util/chplenv/
