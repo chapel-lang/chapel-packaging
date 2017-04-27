@@ -22,7 +22,8 @@ Files-Excluded: doc/html
                 third-party/llvm/unpack-llvm.sh
                 third-party/llvm/update-llvm.sh
                 third-party/massivethreads/massivethreads-src
-                third-party/qthread/qthread-src
+# qthreads test/ includes a lot of other licenses
+                third-party/qthread/qthread-src/test
                 third-party/re2/re2
                 third-party/re2/re2-20140111.tgz
                 third-party/re2/unpack-re2.sh
@@ -32,9 +33,7 @@ Upstream-Contact: Ben Albrecht <balbrecht@cray.com>
 Source: https://github.com/chapel-lang/chapel
 Comment: This is the minimal third-party free version of the package
 
-Files: *
-Copyright: 2004-2017 Cray Inc.
-License: Apache
+License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
@@ -50,12 +49,10 @@ License: Apache
  On Debian systems, the complete text of the Apache License 2.0 can
  be found in "/usr/share/common-licenses/Apache-2.0"
 
-Files: third-party/utf8-decoder/utf8-decoder.h
-Copyright: 2008-2016 Bjoern Hoehrmann <bjoern@hoehrmann.de>
-License: custom-license
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining
  a copy of this software and associated documentation files (the
- "Software"), to deal in the Software without restriction, including
+  "Software"), to deal in the Software without restriction, including
  without limitation the rights to use, copy, modify, merge, publish,
  distribute, sublicense, and/or sell copies of the Software, and to
  permit persons to whom the Software is furnished to do so, subject to
@@ -72,10 +69,6 @@ License: custom-license
  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
-Files: highlight/emacs/*
-Copyright: 2004-2017 Cray Inc.
-           2007 Steve T Balensiefer
 License: GPL-2
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -96,9 +89,225 @@ License: GPL-2
  version 2 can be found in the file "/usr/share/common-licenses/GPL-2".
  /usr/share/common-licenses/GPL-2
 
-Files: highlight/vim/*
-Copyright: 2004-2017 Cray Inc.
-           2008 James Dinan
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301 USA.
+
+License: GPL-3+ with Parser exception
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception, you may create a larger work that contains
+ part or all of the Bison parser skeleton and distribute that work
+ under terms of your choice, so long as that work isn't itself a
+ parser generator using the skeleton or a modified version thereof
+ as a parser skeleton.  Alternatively, if you modify or redistribute
+ the parser skeleton itself, you may (at your option) remove this
+ special exception, which will cause the skeleton and the resulting
+ Bison output files to be licensed under the GNU General Public
+ License without this special exception.
+ .
+ This special exception was added by the Free Software Foundation in
+ version 2.2 of Bison.
+
+License: GPL-2+ with Autoconf exception
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that program.
+
+License: GPL-3+ with Autoconf exception
+ This file is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that
+ program.  This Exception is an additional permission under section 7
+ of the GNU General Public License, version 3 ("GPLv3").
+
+License: GPL-2+ with Autoconf-Macro exception
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+ .
+ As a special exception, the respective Autoconf Macro's copyright
+ owner gives unlimited permission to copy, distribute and modify the
+ configure scripts that are the output of Autoconf when processing
+ the Macro. You need not follow the terms of the GNU General Public
+ License when using or distributing such scripts, even though
+ portions of the text of the Macro appear in them. The GNU General
+ Public License (GPL) does govern all other use of the material that
+ constitutes the Autoconf Macro.
+ .
+ This special exception to the GPL applies to versions of the
+ Autoconf Macro released by the Autoconf Macro Archive. When you
+ make and distribute a modified version of the Autoconf Macro, you
+ may extend this special exception to the GPL to apply to your
+ modified version as well.
+
+License: GPL-3+ with Autoconf-Macro exception
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your
+ option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception, the respective Autoconf Macro's copyright owner
+ gives unlimited permission to copy, distribute and modify the configure
+ scripts that are the output of Autoconf when processing the Macro. You
+ need not follow the terms of the GNU General Public License when using
+ or distributing such scripts, even though portions of the text of the
+ Macro appear in them. The GNU General Public License (GPL) does govern
+ all other use of the material that constitutes the Autoconf Macro.
+ .
+ This special exception to the GPL applies to versions of the Autoconf
+ Macro released by the Autoconf Archive. When you make and distribute a
+ modified version of the Autoconf Macro, you may extend this special
+ exception to the GPL to apply to your modified version as well.
+
+License: GPL-2+ with Libtool exception
+ This is free software; see the source for copying conditions.  There is NO
+ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ .
+ GNU Libtool is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program or library that is built
+ using GNU Libtool, you may include this file under the  same
+ distribution terms that you use for the rest of that program.
+ .
+ GNU Libtool is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#License: LGPL-2.1+
+# This library is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as
+# published by the Free Software Foundation; either version 2.1 of the
+# License, or (at your option) any later version.
+# .
+# This library is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+# .
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+
+License: FSFAP
+ Copying and distribution of this file, with or without modification, are
+ permitted in any medium without royalty provided the copyright notice and
+ this notice are preserved. 
+
+License: FSFUL
+ This file is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+ even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE.
+
+License: custom-qthread-govt-use
+ Under the terms of Contract DE-AC04-94AL85000, there is a non-exclusive
+ license for use of this work by or on behalf of the U.S. Government.
+
+License: qthread-3-clause-bsd
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+     * Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+     * Neither the name of the Sandia Corporation nor the names of its
+       contributors may be used to endorse or promote products derived from
+       this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY SANDIA CORPORATION ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+ EVENT SHALL SANDIA CORPORATION BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 License: VIM
  I)  There are no restrictions on distributing unmodified copies of Vim except
      that they must include this license text.  You can also distribute
@@ -176,3 +385,203 @@ License: VIM
       sources, parts of it or from a modified version.  You may use this
       license for previous Vim releases instead of the license that they came
       with, at your option.
+
+
+
+Files: *
+Copyright: 2004-2017 Cray Inc.
+License: Apache-2.0
+
+Files:
+ compiler/adt/vec.cpp
+ compiler/include/arg.h
+ compiler/include/list.h
+ compiler/include/map.h
+ compiler/include/vec.h
+ compiler/main/arg.cpp
+Copyright:
+  1992-2006, John Plevyak.
+  2004-2017, Cray Inc.
+License: Apache-2.0 and Expat
+
+Files:
+ compiler/backend/beautify.cpp
+ compiler/include/beautify.h
+Copyright:
+ 2004, University of Washington
+ 2004-2017, Cray Inc.
+License: Apache-2.0 and Expat
+
+Files:
+ compiler/include/bison-chapel.h
+ compiler/parser/bison-chapel.cpp
+Copyright: 1984, 1989-1990, 2000-2015, Free Software Foundation, Inc.
+License: GPL-3+ with Parser exception
+
+Files: highlight/emacs/*
+Copyright: 2004-2017 Cray Inc.
+           2007 Steve T Balensiefer
+License: GPL-2
+
+Files: highlight/vim/*
+Copyright: 2004-2017 Cray Inc.
+           2008 James Dinan
+License: VIM
+
+Files:
+ runtime/include/tasks/qthreads/tasks-qthreads.h
+ runtime/src/tasks/qthreads/tasks-qthreads.c
+Copyright:
+ 2004-2017, Cray Inc.
+ 2011, Sandia Corporation.
+License: Apache-2.0 and custom-qthread-govt-use
+
+Files: third-party/qthread/*
+Copyright: 2007-2017, Sandia Corporation
+License: qthread-3-clause-bsd and custom-qthread-govt-use
+
+Files: third-party/qthread/qthread-src/Makefile.in
+ third-party/qthread/qthread-src/include/Makefile.in
+ third-party/qthread/qthread-src/include/qthread/Makefile.in
+ third-party/qthread/qthread-src/man/Makefile.in
+ third-party/qthread/qthread-src/man/man3/Makefile.in
+Copyright: 2004-2015 Free Software Foundation
+License: qthread-3-clause-bsd and FSFUL
+
+Files: third-party/qthread/qthread-src/config/compile
+ third-party/qthread/qthread-src/config/depcomp
+ third-party/qthread/qthread-src/config/missing
+ third-party/qthread/qthread-src/config/test-driver
+Copyright: 1996-2014, Free Software Foundation, Inc.
+  1999-2014, Free Software Foundation, Inc.
+  2011-2014, Free Software Foundation, Inc.
+License: qthread-3-clause-bsd or GPL-2+ with Autoconf exception
+
+Files:
+ third-party/qthread/qthread-src/config/ltoptions.m4
+ third-party/qthread/qthread-src/config/ltsugar.m4
+ third-party/qthread/qthread-src/config/lt~obsolete.m4
+Copyright:
+  2004-2015, Free Software Foundation, Inc.
+License: qthread-3-clause-bsd or FSFUL
+
+Files: third-party/qthread/qthread-src/config/ac_prog_cc_c99.m4
+ third-party/qthread/qthread-src/config/ax_c_restrict.m4
+Copyright: 2001-2006, Free Software Foundation, Inc.
+License: GPL-2+
+
+Files: third-party/qthread/qthread-src/config/ac_prog_sed.m4
+ third-party/qthread/qthread-src/config/ac_use_system_extensions.m4
+Copyright: 1992-1996, 1998-2006, Free Software Foundation, Inc.
+License: GPL-2+
+
+Files: third-party/qthread/qthread-src/config/config.guess
+ third-party/qthread/qthread-src/config/config.sub
+Copyright: 1992-2016, Free Software Foundation, Inc.
+License: qthread-3-clause-bsd or GPL-3+ with Autoconf exception
+
+Files: third-party/qthread/qthread-src/src/net/portals4/runtime-pmi.c
+ third-party/qthread/qthread-src/src/net/portals4/runtime.h
+Copyright: 2011, Sandia Corporation.
+License: qthread-3-clause-bsd and custom-qthread-govt-use
+
+Files: third-party/qthread/qthread-src/config/install-sh
+Copyright: 1994, X Consortium
+License: Expat
+
+Files: third-party/qthread/qthread-src/config/ax_check_page_aligned_malloc.m4
+Copyright: 2008, Scott Pakin <pakin@uiuc.edu>
+License: FSFAP
+
+Files: third-party/qthread/qthread-src/configure
+Copyright: 1992-2014 Free Software Foundation, Inc.
+License: FSFUL
+
+Files: third-party/qthread/qthread-src/config/libtool.m4
+Copyright: 1996-2015, Free Software Foundation, Inc.
+License: qthread-3-clause-bsd or GPL-2+ with Libtool exception
+
+Files: third-party/qthread/qthread-src/config/ltmain.sh
+Copyright: 1996-2015, Free Software Foundation, Inc.
+License: qthread-3-clause-bsd or GPL-2+ with Libtool exception
+
+Files: third-party/qthread/qthread-src/config/ax_create_stdint_h.m4
+Copyright: 2007, Guido U. Draheim <guidod@gmx.de>
+License: GPL-2+ with Autoconf-Macro exception
+
+Files: third-party/qthread/qthread-src/config/ax_tls.m4
+Copyright: 2008, Alan Woodland <ajw05@aber.ac.uk>
+  2010, Diego Elio Petteno` <flameeyes@gmail.com>
+License: GPL-3+ with Autoconf-Macro exception
+
+Files: third-party/qthread/qthread-src/config/ax_openmp.m4
+Copyright: 2008, Steven G. Johnson <stevenj@alum.mit.edu>
+License: GPL-3+ with Autoconf-Macro exception
+
+Files: third-party/qthread/qthread-src/config/qthread_check_assembly.m4
+Copyright: $
+  2004-2006, High Performance Computing Center Stuttgart,
+  2004-2006, The Regents of the University of California.
+  2004-2007, The Trustees of Indiana University and Indiana
+  2004-2007, The University of Tennessee and The University
+  2006, Myricom, Inc.
+  2006, Sandia National Laboratories.
+  2006-2007, Cisco Systems, Inc.
+  2006-2007, Los Alamos National Security, LLC. All rights
+  2006-2007, Sun Microsystems, Inc.
+  2006-2007, The University of Houston.
+  2006-2007, Voltaire, Inc.
+  2007-2008, UT-Battelle, LLC.
+  2008, Sandia Corporation
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ .
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer listed
+   in this license in the documentation and/or other materials
+
+
+Files: third-party/qthread/qthread-src/config/ompi_check_package.m4
+Copyright:
+  2004-2005, High Performance Computing Center Stuttgart,
+  2004-2005, The Regents of the University of California.
+  2004-2005, The Trustees of Indiana University and Indiana
+  2004-2005, The University of Tennessee and The University
+License: qthread-3-clause-bsd
+
+Files:
+ third-party/qthread/qthread-src/src/fastcontext/asm.S
+ third-party/qthread/qthread-src/src/fastcontext/context.c
+ third-party/qthread/qthread-src/include/fastcontext/*
+Copyright:
+  2005-2006, Russ Cox
+  2003 Lucent Technologies
+  2006-2011 Sandia National Laboratories
+License: Expat and qthread-3-clause-bsd
+
+Files: third-party/utf8-decoder/utf8-decoder.h
+Copyright: 2008-2016 Bjoern Hoehrmann <bjoern@hoehrmann.de>
+License: custom-license
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
