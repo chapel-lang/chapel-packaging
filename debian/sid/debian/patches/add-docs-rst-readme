@@ -1,0 +1,49 @@
+Description: Add a top-level README for RST documentation
+ This package installes only RST documentation and not yet HTML
+ documentation. For that reason, the existing top-level README needed to
+ be modified. Additionally note that the examples/ directory is available
+ there.
+Author: Ben Albrecht <balbrecht@cray.com>
+Forwarded: not-needed
+diff --git a/doc/debian/README.rst b/doc/debian/README.rst
+new file mode 100644
+index 0000000000..13d535515d
+--- /dev/null
++++ b/doc/debian/README.rst
+@@ -0,0 +1,36 @@
++Chapel Documentation
++====================
++
++This directory contains Chapel's documentation and examples.
++
++``rst/`` contains the documentation in the format of reStructuredText (rst), a
++markup language. This documentation can be viewed with a text editor of your
++choice.
++
++Note that some files in ``rst/`` are written or generated for the purpose of
++being rendered as HTML, such as the ``modules/`` and ``builtins/`` directory,
++as well as the ``index.rst`` files. For this reason, we recommend browsing the
++documentation in the web format.
++
++``examples/`` contains example Chapel programs that can be compiled by
++the Chapel comiler. Note that you might have to uncompress them first.
++
++Resources
++---------
++
++Here are some useful resources available in ``{rst}/``:
++
++====================================  ========================================
++Building from source                  ``usingchapel/QUICKSTART.{rst,html}``
++Platform-specific notes               ``platforms/``
++Setting Chapel environment variables  ``usingchapel/chplenv.{rst,html}``
++Building the compiler                 ``usingchapel/building.{rst,html}``
++Compiling Chapel programs             ``usingchapel/compiling.{rst,html}``
++Executing Chapel programs             ``usingchapel/executing.{rst,html}``
++Debugging Chapel programs             ``usingchapel/debugging.{rst,html}``
++Reporting bugs                        ``usingchapel/bugs.{rst,html}``
++Users guide                           ``users-guide/``
++Sample computations                   ``examples/``
++Sample of language features           ``primers/``
++====================================  ========================================
++

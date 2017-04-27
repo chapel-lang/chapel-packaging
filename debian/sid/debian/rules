@@ -12,14 +12,23 @@ override_dh_auto_test:
 
 override_dh_auto_configure:
 	bash -c 'source util/quickstart/setchplenv.bash ; bash ./configure --prefix=/usr'
+# Clean up some files that arguably shouldn't be in the release
+# examples: let it contain .chpl, README files only
+# README.testing is removed because we removed the other testing files
+	find examples/ -name '*.chpl' -o -name 'README*' -and -not -name README.testing | tar cvzf examples.tgz --files-from -
+	rm -Rf examples
+	tar xvzf examples.tgz
+# util/chplenv/template is for developers
+	rm -f util/chplenv/template
+
 
 # This would prevent parallel builds 
 #override_dh_auto_build:
 #	bash -c 'source util/quickstart/setchplenv.bash ; $(MAKE)'
 
 #override_dh_auto_install:
-#	mkdir -p $(DESTDIR)/usr
-#	dh_auto_install
+#	mkdir -p usr
+#        dh_auto_install
 #	#bash -c 'source util/quickstart/setchplenv.bash ; $(MAKE) DESTDIR=$(DESTDIR) install'
 #
 override_dh_auto_clean:

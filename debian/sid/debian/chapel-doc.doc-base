@@ -1,0 +1,8 @@
+Document: chapel-documentation
+Title: Chapel Documentation
+Abstract: Description of Chapel language and library with examples
+Section: Programming
+
+Format: Text
+Files:
+  /usr/share/doc/chapel/1.15/README.rst
