@@ -55,7 +55,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  python:any (<< 2.8), python:any (>= 2.7~),
- gcc
+ build-essential
 Description: productive parallel computing (minimal compiler)
  Chapel is an emerging programming language designed for productive parallel
  computing at scale.
