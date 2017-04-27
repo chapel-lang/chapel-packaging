@@ -47,10 +47,10 @@ fi
 
 if [ -z ${DRY+x} ]; then
 
-    rm -f chapel-minimal/compiler/main/COPYRIGHT
-    rm -f chapel-minimal/compiler/main/LICENSE
-    rm -f chapel-minimal/configured-chplconfig
-    rm -f chapel-minimal/configured-prefix
+    rm -f chapel/compiler/main/COPYRIGHT
+    rm -f chapel/compiler/main/LICENSE
+    rm -f chapel/configured-chplconfig
+    rm -f chapel/configured-prefix
 
     (cd ${PKG} && dpkg-buildpackage  --jobs=auto -us -uc 2>&1 | tee ../../cache/build.log)
 else

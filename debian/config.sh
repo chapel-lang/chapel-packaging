@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Print help
 configHelp() {
     echo;
@@ -16,7 +18,7 @@ configSetup() {
     echo ""
 
     # Package specific
-    PKG=chapel-minimal
+    PKG=chapel
     BINARY=chpl
     VERSION=1.15.0
 
@@ -51,17 +53,16 @@ configSetup() {
     SRC=$(basename ${CHPL_RELEASE_URL} | cut -f 1,2,3 -d '.')
     DEB_SRC=debian
 
-    # Package Files
+    # Source Package Files
     BASENAME=${PKG}_${VERSION}-${DEBIAN}
-
     CHANGES=${BASENAME}_${ARCH}.changes
-    DEB=${BASENAME}_${ARCH}.deb
-    DEB_TAR_GZ=${BASENAME}.debian.tar.gz
-    DEB_TAR_XZ=${BASENAME}.debian.tar.xz
     DSC=${BASENAME}.dsc
+
+    # Binary package files made by listing *.deb later.
 }
 
 # Clean up everything except 'debian' directory
 configClean() {
-    find . | grep -v "debian" | xargs rm -rf
+    rm -f *.gz *.xz *.deb *.dsc *.buildinfo *.changes
+    rm -Rf chapel
 }

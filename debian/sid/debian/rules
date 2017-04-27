@@ -12,14 +12,17 @@ override_dh_auto_test:
 
 override_dh_auto_configure:
 	bash -c 'source util/quickstart/setchplenv.bash ; bash ./configure --prefix=/usr'
+	find examples -name '*.chpl' | tar cvzf examples.tgz --files-from -
+	rm -Rf examples
+	tar xvzf examples.tgz
 
 # This would prevent parallel builds 
 #override_dh_auto_build:
 #	bash -c 'source util/quickstart/setchplenv.bash ; $(MAKE)'
 
 #override_dh_auto_install:
-#	mkdir -p $(DESTDIR)/usr
-#	dh_auto_install
+#	mkdir -p usr
+#        dh_auto_install
 #	#bash -c 'source util/quickstart/setchplenv.bash ; $(MAKE) DESTDIR=$(DESTDIR) install'
 #
 override_dh_auto_clean:

@@ -1,0 +1,20 @@
+* install HTML documentation to /usr/share/doc/chapel/html
+  ... it seems we can remove the jquery and possibly other javascript?
+  ... or see julia's package for HTML docs that included jquery/sphinx
+* Include chapel docs in doc-base
+
+    Document: chapel-documentation
+    Title: Chapel Documentation
+    Abstract: Describes Chapel language and library. Includes example programs.
+    Section: Programming
+
+    Format: Text
+    Files:
+      /usr/share/doc/chapel/rst/*/*.rst
+      /usr/share/doc/chapel/rst/*/*/*.rst
+      /usr/share/doc/chapel/rst/*/*/*/*.rst
+
+  -> leads to errors like Error in
+  `/usr/share/doc-base/chapel-documentation', line 10: all `Format'
+  sections are invalid.
+

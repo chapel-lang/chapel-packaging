@@ -1,31 +1,143 @@
-Source: chapel-minimal
+Source: chapel
 Section: devel
 Priority: optional
 Maintainer: Ben Albrecht <balbrecht@cray.com>
 Build-Depends:
  debhelper (>= 9),
- python,
- dh-python
+ python
 Standards-Version: 3.9.8
 Homepage: http://chapel.cray.com/
 Vcs-Git: https://github.com/chapel-lang/chapel.git
 Vcs-Browser: https://github.com/chapel-lang/chapel
 
-Package: chapel-minimal
+Package: chapel
 Architecture: any
 Depends:
- ${shlibs:Depends},
  ${misc:Depends},
- python:any (<< 2.8), python:any (>= 2.7~),
- gcc,
- dh-python
-X-Python-Version: >= 2.7
-Description: Minimal compiler for the Chapel programming language
- Minimal compiler without third-party dependencies for Chapel, an emerging
- programming language designed for productive parallel computing at scale.
+ chapel-common,
+ chapel-compiler-minimal,
+ chapel-runtime-minimal
+Suggests: chapel-doc
+Description: productive parallel computing
+ Chapel is an emerging programming language designed for productive parallel
+ computing at scale.
  .
  Chapel's design and implementation have been undertaken with portability in
  mind, permitting Chapel to run on multicore desktops and laptops, commodity
  clusters, and the cloud, in addition to the high-end supercomputers for which
- it was designed. Chapel's design and development are being led by Cray Inc. in
- collaboration with academia, computing centers, and industry.
+ it was designed. Chapel's design and development are being led by Cray Inc.
+ in collaboration with academia, computing centers, and industry.
+
+Package: chapel-common
+Architecture: all
+Depends:
+ ${misc:Depends},
+ python:any (<< 2.8), python:any (>= 2.7~),
+Description: productive parallel computing (common files)
+ Chapel is an emerging programming language designed for productive parallel
+ computing at scale.
+ .
+ Chapel's design and implementation have been undertaken with portability in
+ mind, permitting Chapel to run on multicore desktops and laptops, commodity
+ clusters, and the cloud, in addition to the high-end supercomputers for which
+ it was designed. Chapel's design and development are being led by Cray Inc.
+ in collaboration with academia, computing centers, and industry.
+ .
+ This package contains Chapel modules and scripts supporting compilation.
+
+Package: chapel-compiler-minimal
+Architecture: any
+Provides: chpl-compiler
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ python:any (<< 2.8), python:any (>= 2.7~),
+ gcc
+Description: productive parallel computing (minimal compiler)
+ Chapel is an emerging programming language designed for productive parallel
+ computing at scale.
+ .
+ Chapel's design and implementation have been undertaken with portability in
+ mind, permitting Chapel to run on multicore desktops and laptops, commodity
+ clusters, and the cloud, in addition to the high-end supercomputers for which
+ it was designed. Chapel's design and development are being led by Cray Inc.
+ in collaboration with academia, computing centers, and industry.
+ .
+ This package provides a minimal version of the Chapel compiler that does not
+ include LLVM integration. It functions by generating C code and then
+ running the system C compiler.
+
+# TODO: chapel-compiler-llvm
+#Package: chapel-compiler-llvm
+#Architecture: any
+#Provides: chpl-compiler
+#Depends:
+# ${shlibs:Depends},
+# ${misc:Depends},
+# python:any (<< 2.8), python:any (>= 2.7~),
+# llvm-3.7,
+# dh-python
+# Description: Compiler for the Chapel programming language with LLVM support
+# Chapel is an emerging programming language designed for productive parallel
+#  computing at scale.
+#  .
+#  Chapel's design and implementation have been undertaken with portability in
+#  mind, permitting Chapel to run on multicore desktops and laptops, commodity
+#  clusters, and the cloud, in addition to the high-end supercomputers for which
+#  it was designed. Chapel's design and development are being led by Cray Inc.
+#  in collaboration with academia, computing centers, and industry.
+#  .
+#  This package provides a verios
+
+Package: chapel-runtime-minimal
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: productive parallel computing (minimal runtime)
+ Chapel is an emerging programming language designed for productive parallel
+ computing at scale.
+ .
+ Chapel's design and implementation have been undertaken with portability in
+ mind, permitting Chapel to run on multicore desktops and laptops, commodity
+ clusters, and the cloud, in addition to the high-end supercomputers for which
+ it was designed. Chapel's design and development are being led by Cray Inc.
+ in collaboration with academia, computing centers, and industry.
+ .
+ This package provides a minimal "quickstart" version of the Chapel runtime.
+
+# TODO: chapel-runtime not minimal
+#Package: chapel-runtime
+#Architecture: any
+#Depends:
+# ${shlibs:Depends},
+# ${misc:Depends},
+#Description: productive parallel computing 
+# Chapel is an emerging programming language designed for productive parallel
+# computing at scale.
+# .
+# Chapel's design and implementation have been undertaken with portability in
+# mind, permitting Chapel to run on multicore desktops and laptops, commodity
+# clusters, and the cloud, in addition to the high-end supercomputers for which
+# it was designed. Chapel's design and development are being led by Cray Inc.
+# in collaboration with academia, computing centers, and industry.
+# .
+# This package provides a the standard single-locale version of the Chapel
+# runtime.
+
+Package: chapel-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+Suggests: chapel
+Description: productive parallel computing (documentation)
+ Chapel is an emerging programming language designed for productive parallel
+ computing at scale.
+ .
+ Chapel's design and implementation have been undertaken with portability in
+ mind, permitting Chapel to run on multicore desktops and laptops, commodity
+ clusters, and the cloud, in addition to the high-end supercomputers for which
+ it was designed. Chapel's design and development are being led by Cray Inc.
+ in collaboration with academia, computing centers, and industry.
+ .
+ This package includes Chapel documentation.
