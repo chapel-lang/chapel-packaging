@@ -35,9 +35,17 @@ do
   echo lintian ${LINTFLAGS} ${DEB}
   rm -f ../cache/${BASE}-lint.log
   lintian ${LINTFLAGS} ${DEB} | tee ../cache/${BASE}-lint.log
+done
 
+echo
+
+for DEB in ${DEBS[*]}
+do
+  BASE=`echo $DEB | cut -f 1 -d _`
+  echo
+ 
   # Information about package
-  echo "Generating package information log"
+  echo "Generating package information log for ${DEB}"
   echo lesspipe ${DEB}
   lesspipe ${DEB} > ../cache/${BASE}-pkg-info.log
 
