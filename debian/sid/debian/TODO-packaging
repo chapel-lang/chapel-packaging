@@ -1,37 +1,29 @@
-* Include chapel docs in doc-base
-
 * Re-build the parser/lexer with flex/bison
-* Re-build the RST/HTML documentation (with chpldoc)
+* Re-build the RST documentation (with chpldoc)
+  - challenges:
+     1) relevant Makefiles not in release
+* Re-build the HTML documentation from the RST (with sphinx)
+  - challenges:
+     1) Makefile for RST -> HTML not in release
+     2) Build process can't download anything (which we do now for
+        a virtualenv)
 
-* install HTML documentation to /usr/share/doc/chapel/html
-  ... it seems we can remove the jquery and possibly other javascript?
-      ... I think the Search functionality is built with JavaScript...
+  * install HTML documentation to /usr/share/doc/chapel/html
+    ... it seems we can remove the jquery and possibly other javascript?
+        ... I think the Search functionality is built with JavaScript...
 
-  ... or see julia's package for HTML docs that included jquery/sphinx
+    ... or see julia's package for HTML docs that included jquery/sphinx
 
 * where to install highlighters?
-
-* Include chapel docs in doc-base
-
-    Document: chapel-documentation
-    Title: Chapel Documentation
-    Abstract: Describes Chapel language and library. Includes example programs.
-    Section: Programming
-
-    Format: Text
-    Files:
-      /usr/share/doc/chapel/rst/*/*.rst
-      /usr/share/doc/chapel/rst/*/*/*.rst
-      /usr/share/doc/chapel/rst/*/*/*/*.rst
-
-  -> leads to errors like Error in
-  `/usr/share/doc-base/chapel-documentation', line 10: all `Format'
-  sections are invalid.
-
+    .... generally not part of the source package
+         ... separate repositories
 
 Upstream build / install TODOs
 * make distclean to remove generated files
 * make installdocs, installexamples
 * make install removes .timestamp
+* CHPL_HWLOC=system
 
 
+# Handy command to build a copyright file
+licensecheck --check '.*' --recursive --deb-machine --lines 0 .
