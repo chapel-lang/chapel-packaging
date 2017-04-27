@@ -564,12 +564,6 @@ Copyright:
   2006-2011 Sandia National Laboratories
 License: Expat and qthread-3-clause-bsd
 
-Files: third-party/qthread/qthread-src/src/fastcontext/asm.S
-Copyright: 2005-2006, Russ Cox, MIT; see COPYRIGHT
-  Sandia National Laboratories
-License: UNKNOWN
- FIXME
-
 Files: third-party/utf8-decoder/utf8-decoder.h
 Copyright: 2008-2016 Bjoern Hoehrmann <bjoern@hoehrmann.de>
 License: custom-license
