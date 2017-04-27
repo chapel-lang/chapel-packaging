@@ -27,6 +27,9 @@ Description: productive parallel computing
  clusters, and the cloud, in addition to the high-end supercomputers for which
  it was designed. Chapel's design and development are being led by Cray Inc.
  in collaboration with academia, computing centers, and industry.
+ .
+ This package is a metapackage that installs a minimal version of the
+ compiler and runtime.
 
 Package: chapel-common
 Architecture: all

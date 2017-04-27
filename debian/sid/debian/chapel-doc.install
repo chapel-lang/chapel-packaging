@@ -1,2 +1,3 @@
+doc/debian/README.rst  usr/share/doc/chapel/1.15
 doc/rst  usr/share/doc/chapel/1.15
 examples usr/share/doc/chapel/1.15
