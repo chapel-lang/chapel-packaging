@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Ben Albrecht <balbrecht@cray.com>
 Build-Depends:
- debhelper (>= 9),
+ debhelper (>= 10),
  python
 Standards-Version: 3.9.8
 Homepage: http://chapel.cray.com/
