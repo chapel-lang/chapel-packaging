@@ -7,8 +7,8 @@ Build-Depends:
  python
 Standards-Version: 3.9.8
 Homepage: http://chapel.cray.com/
-Vcs-Git: https://github.com/chapel-lang/chapel.git
-Vcs-Browser: https://github.com/chapel-lang/chapel
+Vcs-Git: https://github.com/chapel-lang/chapel-packaging.git
+Vcs-Browser: https://github.com/chapel-lang/chapel-packaging
 
 Package: chapel
 Architecture: any
