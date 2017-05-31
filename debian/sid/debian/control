@@ -15,8 +15,8 @@ Architecture: any
 Depends:
  ${misc:Depends},
  chapel-common-1.15,
- chapel-compiler-minimal-1.15,
- chapel-runtime-minimal-1.15
+ chapel-compiler-1.15,
+ chapel-runtime-1.15
 Suggests: chapel-doc-1.15
 Description: productive parallel computing
  Chapel is an emerging programming language designed for productive parallel
@@ -28,8 +28,8 @@ Description: productive parallel computing
  it was designed. Chapel's design and development are being led by Cray Inc.
  in collaboration with academia, computing centers, and industry.
  .
- This package is a metapackage that installs a minimal version of the
- compiler and runtime.
+ This package is a metapackage that installs the Chapel compiler and
+ runtime.
 
 Package: chapel-common-1.15
 Architecture: all
@@ -48,15 +48,14 @@ Description: productive parallel computing (common files)
  .
  This package contains Chapel modules and scripts supporting compilation.
 
-Package: chapel-compiler-minimal-1.15
+Package: chapel-compiler-1.15
 Architecture: any
-Provides: chpl-compiler-1.15
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  python:any (<< 2.8), python:any (>= 2.7~),
  build-essential
-Description: productive parallel computing (minimal compiler)
+Description: productive parallel computing (compiler)
  Chapel is an emerging programming language designed for productive parallel
  computing at scale.
  .
@@ -66,38 +65,16 @@ Description: productive parallel computing (minimal compiler)
  it was designed. Chapel's design and development are being led by Cray Inc.
  in collaboration with academia, computing centers, and industry.
  .
- This package provides a minimal version of the Chapel compiler that does not
- include LLVM integration. It functions by generating C code and then
- running the system C compiler.
+ This package provides the Chapel compiler. It does not include the
+ LLVM integration.  It functions by generating C code and then running
+ the system C compiler.
 
-# TODO: chapel-compiler-llvm
-#Package: chapel-compiler-llvm
-#Architecture: any
-#Provides: chpl-compiler
-#Depends:
-# ${shlibs:Depends},
-# ${misc:Depends},
-# python:any (<< 2.8), python:any (>= 2.7~),
-# llvm-3.7,
-# dh-python
-# Description: Compiler for the Chapel programming language with LLVM support
-# Chapel is an emerging programming language designed for productive parallel
-#  computing at scale.
-#  .
-#  Chapel's design and implementation have been undertaken with portability in
-#  mind, permitting Chapel to run on multicore desktops and laptops, commodity
-#  clusters, and the cloud, in addition to the high-end supercomputers for which
-#  it was designed. Chapel's design and development are being led by Cray Inc.
-#  in collaboration with academia, computing centers, and industry.
-#  .
-#  This package provides a verios
-
-Package: chapel-runtime-minimal-1.15
+Package: chapel-runtime-1.15
 Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Description: productive parallel computing (minimal runtime)
+Description: productive parallel computing (runtime)
  Chapel is an emerging programming language designed for productive parallel
  computing at scale.
  .
@@ -108,25 +85,6 @@ Description: productive parallel computing (minimal runtime)
  in collaboration with academia, computing centers, and industry.
  .
  This package provides a minimal "quickstart" version of the Chapel runtime.
-
-# TODO: chapel-runtime not minimal
-#Package: chapel-runtime
-#Architecture: any
-#Depends:
-# ${shlibs:Depends},
-# ${misc:Depends},
-#Description: productive parallel computing 
-# Chapel is an emerging programming language designed for productive parallel
-# computing at scale.
-# .
-# Chapel's design and implementation have been undertaken with portability in
-# mind, permitting Chapel to run on multicore desktops and laptops, commodity
-# clusters, and the cloud, in addition to the high-end supercomputers for which
-# it was designed. Chapel's design and development are being led by Cray Inc.
-# in collaboration with academia, computing centers, and industry.
-# .
-# This package provides a the standard single-locale version of the Chapel
-# runtime.
 
 Package: chapel-doc-1.15
 Architecture: all
