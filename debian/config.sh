@@ -64,5 +64,5 @@ configSetup() {
 # Clean up everything except 'debian' directory
 configClean() {
     rm -f *.gz *.xz *.deb *.dsc *.buildinfo *.changes
-    rm -Rf chapel
+    rm -Rf chapel-1.15
 }
