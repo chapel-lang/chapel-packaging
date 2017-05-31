@@ -1,2 +1,2 @@
 # Upstream does not provide a cryptographic signature
-chapel source: debian-watch-may-check-gpg-signature
+chapel-1.15 source: debian-watch-may-check-gpg-signature

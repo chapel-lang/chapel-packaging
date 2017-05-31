@@ -1,4 +1,4 @@
-Source: chapel
+Source: chapel-1.15
 Section: devel
 Priority: optional
 Maintainer: Ben Albrecht <balbrecht@cray.com>

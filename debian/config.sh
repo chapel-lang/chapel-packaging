@@ -18,7 +18,7 @@ configSetup() {
     echo ""
 
     # Package specific
-    PKG=chapel
+    PKG=chapel-1.15
     BINARY=chpl
     VERSION=1.15.0
 
