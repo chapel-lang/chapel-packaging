@@ -1,6 +1,8 @@
-chapel
+cache
+chapel-1.15
 chapel-minimal_*
 
+*/*/*.buildinfo
 */*/*.deb
 */*/*.dsc
 */*/*.mentors.upload

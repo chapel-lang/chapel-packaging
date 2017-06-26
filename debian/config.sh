@@ -18,7 +18,7 @@ configSetup() {
     echo ""
 
     # Package specific
-    PKG=chapel
+    PKG=chapel-1.15
     BINARY=chpl
     VERSION=1.15.0
 
@@ -64,5 +64,5 @@ configSetup() {
 # Clean up everything except 'debian' directory
 configClean() {
     rm -f *.gz *.xz *.deb *.dsc *.buildinfo *.changes
-    rm -Rf chapel
+    rm -Rf chapel-1.15
 }
