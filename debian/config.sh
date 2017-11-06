@@ -18,9 +18,12 @@ configSetup() {
     echo ""
 
     # Package specific
-    PKG=chapel-1.15
+    PKG=chapel-1.16
     BINARY=chpl
-    VERSION=1.15.0
+    VERSION=1.16.0
+
+    # Temporary work-around for 1.16.0.1
+    CHPL_RELEASE_URL=https://github.com/chapel-lang/chapel/releases/download/1.16.0/chapel-1.16.0-1.tar.gz
 
     # This variable is always read as an environment variable
     if [ -z ${CHPL_RELEASE_URL} ]; then
@@ -64,5 +67,5 @@ configSetup() {
 # Clean up everything except 'debian' directory
 configClean() {
     rm -f *.gz *.xz *.deb *.dsc *.buildinfo *.changes
-    rm -Rf chapel-1.15
+    rm -Rf chapel-1.16
 }
