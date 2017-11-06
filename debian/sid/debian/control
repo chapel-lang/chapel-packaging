@@ -1,4 +1,4 @@
-Source: chapel-1.15
+Source: chapel-1.16
 Section: devel
 Priority: optional
 Maintainer: Ben Albrecht <balbrecht@cray.com>
@@ -10,14 +10,14 @@ Homepage: http://chapel.cray.com/
 Vcs-Git: https://github.com/chapel-lang/chapel-packaging.git
 Vcs-Browser: https://github.com/chapel-lang/chapel-packaging
 
-Package: chapel-1.15
+Package: chapel-1.16
 Architecture: any
 Depends:
  ${misc:Depends},
- chapel-common-1.15,
- chapel-compiler-1.15,
- chapel-runtime-1.15
-Suggests: chapel-doc-1.15
+ chapel-common-1.16,
+ chapel-compiler-1.16,
+ chapel-runtime-1.16
+Suggests: chapel-doc-1.16
 Description: productive parallel computing
  Chapel is an emerging programming language designed for productive parallel
  computing at scale.
@@ -31,7 +31,7 @@ Description: productive parallel computing
  This package is a metapackage that installs the Chapel compiler and
  runtime.
 
-Package: chapel-common-1.15
+Package: chapel-common-1.16
 Architecture: all
 Depends:
  ${misc:Depends},
@@ -48,7 +48,7 @@ Description: productive parallel computing (common files)
  .
  This package contains Chapel modules and scripts supporting compilation.
 
-Package: chapel-compiler-1.15
+Package: chapel-compiler-1.16
 Architecture: any
 Depends:
  ${shlibs:Depends},
@@ -69,7 +69,7 @@ Description: productive parallel computing (compiler)
  LLVM integration.  It functions by generating C code and then running
  the system C compiler.
 
-Package: chapel-runtime-1.15
+Package: chapel-runtime-1.16
 Architecture: any
 Depends:
  ${shlibs:Depends},
@@ -86,11 +86,11 @@ Description: productive parallel computing (runtime)
  .
  This package provides a minimal "quickstart" version of the Chapel runtime.
 
-Package: chapel-doc-1.15
+Package: chapel-doc-1.16
 Architecture: all
 Section: doc
 Depends: ${misc:Depends},
-Suggests: chapel-1.15
+Suggests: chapel-1.16
 Description: productive parallel computing (documentation)
  Chapel is an emerging programming language designed for productive parallel
  computing at scale.
