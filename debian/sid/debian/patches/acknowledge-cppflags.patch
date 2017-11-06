@@ -6,18 +6,18 @@ Forwarded: not-needed
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/compiler/make/Makefile.compiler.head
 +++ b/compiler/make/Makefile.compiler.head
-@@ -36,7 +36,7 @@
+@@ -39,7 +39,7 @@
  include $(CHPL_MAKE_HOME)/make/Makefile.base
  
  INCL_CFLAGS = -I. -I$(COMPILER_ROOT)/include/$(CHPL_MAKE_HOST_PLATFORM) -I$(COMPILER_ROOT)/include $(LLVM_INCLUDES)
--COMP_CFLAGS += $(INCL_CFLAGS)
-+COMP_CFLAGS += $(INCL_CFLAGS) $(CPPFLAGS)
+-COMP_CXXFLAGS += $(INCL_CFLAGS)
++COMP_CXXFLAGS += $(INCL_CFLAGS) $(CPPFLAGS)
  
  #
  # add gc-related stuff
 --- a/runtime/make/Makefile.runtime.include
 +++ b/runtime/make/Makefile.runtime.include
-@@ -110,7 +110,7 @@
+@@ -120,7 +120,7 @@
  RUNTIME_DEFS += -fPIC
  endif
  

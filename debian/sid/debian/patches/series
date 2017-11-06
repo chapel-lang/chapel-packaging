@@ -1,5 +1,3 @@
-add-make-install.patch
 acknowledge-cppflags.patch
-funciton.patch
 chplconfig
 add-docs-rst-readme
