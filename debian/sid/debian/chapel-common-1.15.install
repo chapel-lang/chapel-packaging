@@ -1,8 +1,0 @@
-usr/share/chapel/1.15/compiler
-usr/share/chapel/1.15/make
-usr/share/chapel/1.15/modules
-usr/share/chapel/1.15/runtime
-usr/share/chapel/1.15/util
-usr/lib/chapel/1.15/runtime/include
-usr/lib/chapel/1.15/third-party/*/Makefile*
-usr/lib/chapel/1.15/third-party/*/*.h
