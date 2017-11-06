@@ -1,5 +1,5 @@
 cache
-chapel-1.15
+chapel-1.*
 chapel-minimal_*
 
 */*/*.buildinfo

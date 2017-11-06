@@ -20,7 +20,8 @@ set, it will try to determine defaults:
 * Set `$DEBIAN_RELEASE` to the Debian release version name, e.g. `jessie`.
 
 Dependencies to install prior to package building:
-  `sudo apt-get install build-essential python-setuptools packaging-dev libgmp-dev`
+
+    sudo apt-get install build-essential python-setuptools packaging-dev libgmp-dev
 
 ## Scripts
 

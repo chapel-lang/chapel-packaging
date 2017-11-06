@@ -1,0 +1,8 @@
+usr/share/chapel/1.16/compiler
+usr/share/chapel/1.16/make
+usr/share/chapel/1.16/modules
+usr/share/chapel/1.16/runtime
+usr/share/chapel/1.16/util
+usr/lib/chapel/1.16/runtime/include
+usr/lib/chapel/1.16/third-party/*/Makefile*
+usr/lib/chapel/1.16/third-party/*/*.h
