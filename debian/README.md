@@ -48,3 +48,27 @@ Not executable.
 
 Contains all the variables necessary for other scripts. See the default values
 here.
+
+
+## FAQ
+
+### How do I build with pbuilder?
+
+
+Install pbuilder:
+
+```
+sudo apt install pbuilder
+```
+
+Build the package with `./build.sh`
+
+
+Run pbuilder on the source package:
+
+```
+cd sid/
+sudo pbuilder --build chapel-1.16_1.16.0-1.dsc
+```
+
+
