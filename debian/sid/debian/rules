@@ -2,14 +2,14 @@
 # -*- makefile -*-
 
 export DH_VERBOSE=1
-export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-export CHPL_CHECK_INSTALL_DIR = ${TMPDIR}
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+export CHPL_CHECK_INSTALL_DIR=${TMPDIR}
 
 %:
 	bash -c 'source util/quickstart/setchplenv.bash ; dh $@ --parallel'
 
 override_dh_auto_test:
-	bash -c 'source util/quickstart/setchplenv.bash ; $(MAKE) check'
+	bash -c 'source util/quickstart/setchplenv.bash ;  $(MAKE) check'
 
 override_dh_auto_configure:
 	bash -c 'source util/quickstart/setchplenv.bash ; bash ./configure --prefix=/usr'
@@ -17,9 +17,11 @@ override_dh_auto_configure:
 # examples: let it contain .chpl, README files only
 # README.testing is removed because we removed the other testing files
 	find examples/ -name '*.chpl' -o -name 'README*' -and -not -name README.testing | tar cvzf examples.tgz --files-from -
-	rm -Rf examples
+	mv examples examples-save
 	tar xvzf examples.tgz
 	rm -Rf examples.tgz
+	mv examples deb-examples
+	mv examples-save examples
 # util/chplenv/template is for developers
 	rm -f util/chplenv/template
 
