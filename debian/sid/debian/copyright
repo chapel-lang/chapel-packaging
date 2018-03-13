@@ -9,24 +9,21 @@ Files-Excluded: doc/html
                 third-party/fltk/fl_line_style.cxx
                 third-party/fltk/fltk-1.3.3-source.tar.gz
                 third-party/gasnet/gasnet-src
-                third-party/gmp/gmp-6.0.0a.tar.bz2
+                third-party/gmp/gmp-src
                 third-party/hwloc/hwloc-src
                 third-party/jemalloc/jemalloc-src
                 third-party/libhdfs3/fetch-libhdfs3.sh
                 third-party/libunwind/libunwind-1.1.tar.gz
-                third-party/llvm/cfe-3.7.0.src.tar.xz
+                third-party/llvm/cfe-4.0.1.src.tar.xz
                 third-party/llvm/cmake-ok.sh
                 third-party/llvm/COMPILERONLY
                 third-party/llvm/find-llvm-config.sh
-                third-party/llvm/llvm-3.7.0.src.tar.xz
+                third-party/llvm/llvm-4.0.1.src.tar.xz
                 third-party/llvm/unpack-llvm.sh
                 third-party/llvm/update-llvm.sh
                 third-party/massivethreads/massivethreads-src
                 third-party/qthread/qthread-src/
-                third-party/re2/re2
-                third-party/re2/re2-20140111.tgz
-                third-party/re2/unpack-re2.sh
-                third-party/re2/update-re2.sh
+                third-party/re2/re2-src
 Upstream-Name: Chapel
 Upstream-Contact: Ben Albrecht <balbrecht@cray.com>
 Source: https://github.com/chapel-lang/chapel
