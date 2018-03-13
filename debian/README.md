@@ -61,6 +61,12 @@ Install pbuilder:
 sudo apt install pbuilder
 ```
 
+Create a pbuilder chroot environment:
+```
+sudo pbuilder create
+```
+(later you might run `sudo pbuilder update` to update the chroot environment).
+
 Build the package with `./build.sh`
 
 
