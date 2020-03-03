@@ -1,0 +1,21 @@
+[paket]
+tanim   = Chapel paralel programlama dili
+paketci = milisarge
+grup 	= geliştirme
+url     = https://chapel-lang.org
+
+[gerek]
+derleme = python python2 openmpi
+calisma = 
+
+[kaynak]
+git     = https://github.com/chapel-lang/chapel
+
+[derle]
+betik   = cd chapel; ./configure --prefix=/usr 
+betik   = sed -i 's/python/python2/g' util/build_configs/build_configs.py
+betik   = util/build_configs/build_configs.py --target-compiler=gnu,mpi-gnu --cpu=native,none --tasks=qthreads,fifo --comm=none,gasnet --substrate=udp,mpi,smp
+	      
+[pakur]
+betik   = cd chapel
+tip     = gnu
