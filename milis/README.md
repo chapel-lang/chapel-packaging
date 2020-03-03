@@ -1,9 +1,9 @@
 # Milis Linux
 
-## Building Chapel Package
+## Building
 
 `mps der chapel` 
 
-## Installling Chapel Package
+## Installling
 
 `mps kur chapel`
