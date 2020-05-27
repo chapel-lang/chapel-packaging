@@ -1,9 +1,9 @@
-# Milis Linux
+## Milis Linux
 
-## Building
+### Building
 
 `mps der chapel` 
 
-## Installling
+### Installling (1.23.0 pre-release)
 
-`mps kur chapel`
+`mps kur chapel` 
