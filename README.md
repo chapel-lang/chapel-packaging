@@ -13,9 +13,9 @@ each OS.
 
 ## Packages
 
-The following distributions has deployment around the Chapel 1.21.0(git) release.
+The following distributions has deployment around the Chapel 1.23.0(git) release.
 
-* Milis (mps)
+* Milis Linux (mps.lz)
 
 The following distributions are currently works in progress, and are planned
 for deployment around the Chapel 1.13.0 release.
