@@ -1,0 +1,139 @@
+Chapel 1.26.0
+=============
+
+  Hewlett Packard Enterprise (HPE) and the Chapel open-source
+  community are pleased to present version 1.26.0 of the Chapel
+  language and compiler.  Chapel is a parallel programming language
+  designed to improve the productivity of large-scale supercomputers,
+  while also serving as a portable way to write parallel programs for
+  everything from laptops to commodity clusters to the cloud.
+
+  Chapel's design and development are being led by HPE collaboratively
+  with members of academia, computing labs, industry, and the
+  open-source community.  It is being developed openly on GitHub under
+  the Apache 2.0 license.  We encourage feedback and contributions
+  from users to help us continue to improve Chapel's utility,
+  generality, and adoption.
+
+
+Release Date
+------------
+  March 31, 2021
+
+
+Highlights
+----------
+  The highlights of Chapel 1.26.0 are as follows:
+
+  Chapel's support for LLVM has improved to include versions 12 and 13
+  in addition to the pre-existing support for version 11.  Generally
+  speaking, LLVM 13 is the preferred version, and when building Chapel
+  from source, if multiple versions of LLVM are available on the
+  system, the latest compatible version will be chosen.
+
+  Chapel 1.26.0 includes a new 'CopyAggregation' package module, which
+  can accelerate the performance of fine-grained communication.  It
+  also includes a 'Socket' package to support sockets-based network
+  programming and a 'Channel' package as an additional way to
+  communicate between tasks.
+
+  Continuing Chapel's recent theme of stabilizing the language and
+  standard libraries, several improvements have been made to standard
+  methods and operators on ranges, domains, and arrays.  In addition,
+  many standard libraries have been improved in terms of interfaces
+  and namings.
+
+  Chapel's 'ofi'-based libfabric communication layer has improved
+  significantly in this release in terms of portability, robustness,
+  and performance.  In addition, Chapel's prototype support for GPU
+  code generation has improved in terms of its generality and the
+  computational patterns it supports.
+
+  This release also features a handy new utility script designed to
+  help understand the versions of the runtime that are available in a
+  given Chapel installation.  It can be found at:
+  '$CHPL_HOME/util/chplenv/printchplbuilds.py'
+
+  In addition to these highlights, Chapel 1.26.0 contains a large
+  number of additional feature enhancements, error message
+  improvements, and bug fixes.  See '$CHPL_HOME/CHANGES.md' or
+  'https://github.com/chapel-lang/chapel/blob/release/1.26/CHANGES.md'
+  for a more complete list of changes in Chapel 1.26.0.
+
+
+Documentation and Getting Started
+---------------------------------
+  To get started with Chapel, refer to the general Chapel
+  documentation hierarchy online at https://chapel-lang.org/docs/ or
+  within the release at $CHPL_HOME/doc/README.rst.
+
+  For general information about Chapel, please refer to the Chapel
+  website at: https://chapel-lang.org
+
+
+User Support and Community
+--------------------------
+  Users are encouraged to ask questions and join discussions in a
+  variety of forums (Stack Overflow, Gitter, Discourse, etc.) listed
+  at https://chapel-lang.org/community.html.  To file bugs or feature
+  requests against Chapel, refer to https://chapel-lang.org/bugs.html
+  or $CHPL_HOME/doc/rst/usingchapel/bugs.rst
+
+
+How Do I Get It?
+----------------
+  Chapel 1.26.0 is available for download at these URLs:
+
+    https://support.hpe.com/connect/s/search?t=DriversandSoftware#q=Chapel
+    https://github.com/chapel-lang/chapel/releases/tag/1.26.0
+
+
+Contents
+--------
+  The pre-built Chapel module contains the Chapel compiler, runtime
+  libraries, user libraries, example programs, and documentation for
+  use on Cray XC and HPE Cray EX systems.
+
+  Chapel can also be built from source for Cray XC, HPE Cray EX,
+  Cray CS, HPE Apollo, and HPE Superdome Flex systems, as well as most
+  systems supporting a Unix-like operating system and C/C++ compilers.
+
+
+License
+-------
+  Chapel is licensed under the terms of the Apache 2.0 license, and it
+  makes use of several third-party packages with compatible licenses.
+  See $CHPL_HOME/LICENSE or https://chapel-lang.org/license.html for
+  details.
+
+
+Installation instructions
+-------------------------
+  On Cray XC systems, copy the appropriate Chapel RPM file to the
+  current directory and execute one of the following commands:
+
+  For x86_64-based Cray XC systems:
+    rpm -ivh chapel-1.26.0-crayxc[CHPL_RELEASE_NUMBER].x86_64.rpm
+
+  For aarch64-based Cray XC systems:
+    rpm -ivh chapel-1.26.0-crayxc[CHPL_RELEASE_NUMBER].aarch64.rpm
+
+  To make this the default version:
+    /opt/cray/admin-pe/set_default_files/set_default_chapel_1.26.0
+
+  On Cray HPE EX systems, Chapel is pre-installed as part of the
+  Analytics product stream, and is available via:
+      module load chapel
+
+  To build from source, download the source release tar file
+    chapel-1.26.0.tar.gz
+  from GitHub:
+    https://github.com/chapel-lang/chapel/releases/tag/1.26.0
+
+  Unpack the tar file and follow the instructions in
+    https://chapel-lang.org/download.html or
+    $CHPL_HOME/doc/rst/platforms/cray.rst
+
+  For further instructions on using Chapel, refer to
+    https://chapel-lang.org/docs/usingchapel/ or
+    $CHPL_HOME/doc/rst/usingchapel/
